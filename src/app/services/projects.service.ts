@@ -189,7 +189,7 @@ export class ProjectsService {
     this.hasLoaded = false;
     this.APIError = false;
 
-    return this.http.get('./db.json')
+    return this.http.get('./app/services/db2.json')
       .map((res: Response) => {
         this.project = res.json();
         this.setProjectDefaults(this.project);

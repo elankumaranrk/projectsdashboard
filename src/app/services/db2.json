@@ -1,0 +1,34 @@
+{
+  "id": "agera",
+  "name": "Agera",
+  "websiteUrl": "https://github.com/google/agera",
+  "summary": "Reactive Programming for Android",
+  "description": "\u003cp\u003eAgera is a set of classes and interfaces to help write functional, asynchronous, and reactive applications for Android.\u003c/p\u003e\n",
+  "repositories": [
+    {
+      "url": "https://github.com/google/agera",
+      "name": "agera",
+      "languages": [
+        "Java"
+      ],
+      "githubStars": "6377",
+      "githubForks": "584",
+      "updateTime": "2017-04-12T03:17:56Z",
+      "license": "Apache 2.0",
+      "licenseUrl": "https://github.com/google/agera/blob/master/LICENSE"
+    }
+  ],
+  "iconUrlSmall": "https://opensource.google.com/project-images/agera/logo.png?rs=AGWjSYS5nuW4GEfPki0shnrhQAwjne1WPg&sqp=-oaymwEICEwQTCAAUAEIu66ZxwU",
+  "iconUrlMedium": "https://opensource.google.com/project-images/agera/logo.png?rs=AGWjSYThGqsr9VVFF9o4i2uXbpqSocB_5g&sqp=-oaymwEKCIwBEIwBIABQAQi7rpnHBQ",
+  "categories": [
+    "mobile"
+  ],
+  "tags": [
+    "android",
+    "reactive"
+  ],
+  "languages": [
+    "java"
+  ],
+  "primaryColor": "#b3278a"
+}
