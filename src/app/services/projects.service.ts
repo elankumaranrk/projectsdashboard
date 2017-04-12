@@ -41,14 +41,14 @@ export class ProjectsService {
       query: '',
       languages: '',
       fields:
-        'projects.id,' +
-        'projects.name,' +
-        'projects.summary,' +
-        'projects.iconUrlSmall,' +
-        'projects.iconUrlMedium,' +
-        'projects.primaryColor,' +
-        'total_size,' +
-        'next_page_token',
+      'projects.id,' +
+      'projects.name,' +
+      'projects.summary,' +
+      'projects.iconUrlSmall,' +
+      'projects.iconUrlMedium,' +
+      'projects.primaryColor,' +
+      'total_size,' +
+      'next_page_token',
       page_size: (this.view === 'explore') ?
         this.config_service.EXPLORE_PAGE_SIZE :
         this.config_service.LIST_PAGE_SIZE,
@@ -82,8 +82,8 @@ export class ProjectsService {
 
     project.RGB =
       (project.primaryColor) ?
-      this.utils_service.hexToRgb(project.primaryColor) :
-      this.utils_service.hexToRgb(project.fallbackColor);
+        this.utils_service.hexToRgb(project.primaryColor) :
+        this.utils_service.hexToRgb(project.fallbackColor);
   }
 
   private getPageSize = (): number => {
@@ -136,7 +136,7 @@ export class ProjectsService {
   }
 
   private buildQueryString = (simpleSearchQuery): string => {
-    let query:string = '';
+    let query: string = '';
 
     if (simpleSearchQuery) {
       query += simpleSearchQuery;
@@ -145,7 +145,7 @@ export class ProjectsService {
     }
 
     if (this.languages_service.selectedLanguages.length) {
-      let languages:string = '';
+      let languages: string = '';
       this.languages_service.selectedLanguages.forEach((language) => {
         languages += language + ' ';
       });
@@ -169,8 +169,8 @@ export class ProjectsService {
       URL += '&page_token=' + this.requestParams.page_token;
     }
 
-    return this.http.get(URL)
-      .map((res:Response) => {
+    return this.http.get('./app/services/db.json')
+      .map((res: Response) => {
         const response = this.processAPIResponse(res);
         this.hasLoaded = true;
         this.hasPaginated = false;
@@ -189,8 +189,8 @@ export class ProjectsService {
     this.hasLoaded = false;
     this.APIError = false;
 
-    return this.http.get(URL)
-      .map((res:Response) => {
+    return this.http.get('./db.json')
+      .map((res: Response) => {
         this.project = res.json();
         this.setProjectDefaults(this.project);
         if (this.project.relatedTo) {
@@ -206,6 +206,8 @@ export class ProjectsService {
         return this.project;
       })
       .toPromise();
+
+    
   }
 
 }

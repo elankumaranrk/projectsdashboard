@@ -1,0 +1,444 @@
+{
+  "projects": [
+    {
+      "id": "agera",
+      "name": "Agera",
+      "summary": "Reactive Programming for Android",
+      "iconUrlSmall": "https://opensource.google.com/project-images/agera/logo.png?rs=AGWjSYS5nuW4GEfPki0shnrhQAwjne1WPg&sqp=-oaymwEICEwQTCAAUAEIu66ZxwU",
+      "iconUrlMedium": "https://opensource.google.com/project-images/agera/logo.png?rs=AGWjSYThGqsr9VVFF9o4i2uXbpqSocB_5g&sqp=-oaymwEKCIwBEIwBIABQAQi7rpnHBQ",
+      "primaryColor": "#b3278a"
+    },
+    {
+      "id": "airport",
+      "name": "Airport Puzzle Solver",
+      "summary": "Visual puzzle solver for Smartgames 'Airport' puzzle",
+      "iconUrlSmall": "https://opensource.google.com/project-images/airport/logo.png?rs=AGWjSYQtWa2bgsxCKBFKBXI9YsrmCWqU0Q&sqp=-oaymwEICEwQTCAAUAEIvK6ZxwU",
+      "iconUrlMedium": "https://opensource.google.com/project-images/airport/logo.png?rs=AGWjSYT2-QNLnfVyZf3VFboKyhV7CR1hWg&sqp=-oaymwEKCIwBEIwBIABQAQi8rpnHBQ",
+      "primaryColor": "#DDCEC5"
+    },
+    {
+      "id": "android",
+      "name": "Android",
+      "summary": "An operating system for a wide range of devices",
+      "iconUrlSmall": "https://opensource.google.com/project-images/android/logo.png?rs=AGWjSYS6kBWghMRTm1IGNm20wuX14zPGqw&sqp=-oaymwEICEwQTCAAUAEIva6ZxwU",
+      "iconUrlMedium": "https://opensource.google.com/project-images/android/logo.png?rs=AGWjSYRkw9QgGGN2Iyl-GOMXTIjWzNzCJg&sqp=-oaymwEKCIwBEIwBIABQAQi9rpnHBQ",
+      "primaryColor": "#A7C640"
+    },
+    {
+      "id": "angular",
+      "name": "Angular",
+      "summary": "A web application framework for mobile, desktop, and web",
+      "iconUrlSmall": "https://opensource.google.com/project-images/angular/logo.svg",
+      "iconUrlMedium": "https://opensource.google.com/project-images/angular/logo.svg"
+    },
+    {
+      "id": "badwolf",
+      "name": "BadWolf",
+      "summary": "Temporal graph store abstraction layer",
+      "iconUrlSmall": "https://opensource.google.com/project-images/badwolf/logo.png?rs=AGWjSYRKkWCD2DRhgSUS5c4i3tJY160AEA&sqp=-oaymwEICEwQTCAAUAEIw66ZxwU",
+      "iconUrlMedium": "https://opensource.google.com/project-images/badwolf/logo.png?rs=AGWjSYS-nNcuCagQGBYSo3yR65NPLfVPGQ&sqp=-oaymwEKCIwBEIwBIABQAQjDrpnHBQ",
+      "primaryColor": "#1E4689"
+    },
+    {
+      "id": "bazel",
+      "name": "Bazel",
+      "summary": "Google's build system for fast and correct builds",
+      "iconUrlSmall": "https://opensource.google.com/project-images/bazel/logo.png?rs=AGWjSYTibWmz8a5I5im7qTM-sVh76xSDTQ&sqp=-oaymwEICEwQTCAAUAEIxK6ZxwU",
+      "iconUrlMedium": "https://opensource.google.com/project-images/bazel/logo.png?rs=AGWjSYRgpVqnsUEjVdfote8O6nd-HrWz7w&sqp=-oaymwEKCIwBEIwBIABQAQjErpnHBQ",
+      "primaryColor": "#6AA948"
+    },
+    {
+      "id": "benchmark",
+      "name": "benchmark",
+      "summary": "A microbenchmark support library"
+    },
+    {
+      "id": "blockly",
+      "name": "Blockly",
+      "summary": "Open source library for adding drag and drop block coding to apps",
+      "iconUrlSmall": "https://opensource.google.com/project-images/blockly/logo.png?rs=AGWjSYRSHTSqKIpoL2zXvKsIsdUbhpW-YA&sqp=-oaymwEICEwQTCAAUAEIxa6ZxwU",
+      "iconUrlMedium": "https://opensource.google.com/project-images/blockly/logo.png?rs=AGWjSYS0K0tjb5PmLMvT2UVMx92EzDbPZA&sqp=-oaymwEKCIwBEIwBIABQAQjFrpnHBQ",
+      "primaryColor": "#6285A7"
+    },
+    {
+      "id": "boringssl",
+      "name": "BoringSSL",
+      "summary": "A fork of OpenSSL used to implement cryptography and TLS across most of Google's products",
+      "iconUrlSmall": "https://opensource.google.com/project-images/boringssl/logo.png?rs=AGWjSYTLNOPhijbaSL6M3QhAoCAsjVcO1A&sqp=-oaymwEICEwQTCAAUAEIx66ZxwU",
+      "iconUrlMedium": "https://opensource.google.com/project-images/boringssl/logo.png?rs=AGWjSYQzTGw0dUJcm6NXXzqTvSdh99I7zA&sqp=-oaymwEKCIwBEIwBIABQAQjHrpnHBQ",
+      "primaryColor": "#6B4B9F"
+    },
+    {
+      "id": "cameraview",
+      "name": "CameraView",
+      "summary": "CameraView helps Android developers easily integrate Camera features"
+    },
+    {
+      "id": "cas-eval",
+      "name": "Clicks-Attention-Satisfaction Evaluation Model and Metric",
+      "summary": "A collection of components to collect data and train a user model and a corresponding search engine result page evaluation metric"
+    },
+    {
+      "id": "certificate-transparency",
+      "name": "Certificate Transparency",
+      "summary": "A framework for monitoring and auditing SSL certificates in nearly real time",
+      "iconUrlSmall": "https://opensource.google.com/project-images/certificate-transparency/logo.png?rs=AGWjSYTY91lUB88TS4Ldl0cY8j2AgU0m1w&sqp=-oaymwEICEwQTCAAUAEI0K6ZxwU",
+      "iconUrlMedium": "https://opensource.google.com/project-images/certificate-transparency/logo.png?rs=AGWjSYTfHe_1O9Ft2fHLdz0clsJOb21tMg&sqp=-oaymwEKCIwBEIwBIABQAQjQrpnHBQ",
+      "primaryColor": "#181C1D"
+    },
+    {
+      "id": "chromium",
+      "name": "Chromium",
+      "summary": "A safer, faster, and more stable web browser",
+      "iconUrlSmall": "https://opensource.google.com/project-images/chromium/logo.png?rs=AGWjSYRR5LtCZDoDJXFV18za83wVQfNykg&sqp=-oaymwEICEwQTCAAUAEI0a6ZxwU",
+      "iconUrlMedium": "https://opensource.google.com/project-images/chromium/logo.png?rs=AGWjSYQlRk4TQaeqBHryVZ8_vol4u7WnQw&sqp=-oaymwEKCIwBEIwBIABQAQjRrpnHBQ",
+      "primaryColor": "#83AEF6"
+    },
+    {
+      "id": "cloudprint_logocert",
+      "name": "Google Cloud Print Logo Certification Tool",
+      "summary": "Google Cloud Print Logo Certification Automation",
+      "iconUrlSmall": "https://opensource.google.com/project-images/cloudprint_logocert/logo.png?rs=AGWjSYR1CyIy5_mHrynafc8uSCqNwy4BSA&sqp=-oaymwEICEwQTCAAUAEI1K6ZxwU",
+      "iconUrlMedium": "https://opensource.google.com/project-images/cloudprint_logocert/logo.png?rs=AGWjSYQSRAJ4aPhPBtb1p90dFT3ykld_Gg&sqp=-oaymwEKCIwBEIwBIABQAQjUrpnHBQ",
+      "primaryColor": "#577EBF"
+    },
+    {
+      "id": "copybara",
+      "name": "Copybara",
+      "summary": "A tool for transforming and moving code between repositories",
+      "iconUrlSmall": "https://opensource.google.com/project-images/copybara/logo.png?rs=AGWjSYSNvJV_9-hAuo40Iebwqn8Ex0aEmQ&sqp=-oaymwEICEwQTCAAUAEI1a6ZxwU",
+      "iconUrlMedium": "https://opensource.google.com/project-images/copybara/logo.png?rs=AGWjSYSiAd2_jl3jZulJLlF2jQx1ujKv2w&sqp=-oaymwEKCIwBEIwBIABQAQjVrpnHBQ",
+      "primaryColor": "#41929D"
+    },
+    {
+      "id": "crouton",
+      "name": "crouton",
+      "summary": "Chromium OS Universal Chroot Environment",
+      "iconUrlSmall": "https://opensource.google.com/project-images/crouton/logo.svg",
+      "iconUrlMedium": "https://opensource.google.com/project-images/crouton/logo.svg",
+      "primaryColor": "#696969"
+    },
+    {
+      "id": "dart",
+      "name": "Dart",
+      "summary": "Dart is a language designed to be productive, stable, and free of surprises",
+      "iconUrlSmall": "https://opensource.google.com/project-images/dart/logo.png?rs=AGWjSYRz36ESzL3LYDPPZkENb-FXvDQDJw&sqp=-oaymwEICEwQTCAAUAEI2K6ZxwU",
+      "iconUrlMedium": "https://opensource.google.com/project-images/dart/logo.png?rs=AGWjSYR3HfV_xfj9rGQK1b92RtmKo6f_Eg&sqp=-oaymwEKCIwBEIwBIABQAQjYrpnHBQ",
+      "primaryColor": "#13D5BD"
+    },
+    {
+      "id": "dart-sass",
+      "name": "Dart Sass",
+      "summary": "A Dart implementation of Sass",
+      "iconUrlSmall": "https://opensource.google.com/project-images/dart-sass/logo.png?rs=AGWjSYRywZwdIfgTlFEfGesTwvRnOCVdsw&sqp=-oaymwEICEwQTCAAUAEI2K6ZxwU",
+      "iconUrlMedium": "https://opensource.google.com/project-images/dart-sass/logo.png?rs=AGWjSYSLEqQsq8X5e22Bw-RFdekiKw5kPQ&sqp=-oaymwEKCIwBEIwBIABQAQjYrpnHBQ",
+      "primaryColor": "#C76395"
+    },
+    {
+      "id": "easypki",
+      "name": "Easy Public Key Infrastructure",
+      "summary": "A simplified Public Key Infrastructure management tool"
+    },
+    {
+      "id": "end-to-end",
+      "name": "End-To-End",
+      "summary": "End-To-End is a Chrome extension that helps you encrypt, decrypt, digitally sign, and verify signed messages within the browser using OpenPGP",
+      "iconUrlSmall": "https://opensource.google.com/project-images/end-to-end/logo.png?rs=AGWjSYSyloQkVq5ZnRJvaoaM8HuZHiG2IQ&sqp=-oaymwEICEwQTCAAUAEI366ZxwU",
+      "iconUrlMedium": "https://opensource.google.com/project-images/end-to-end/logo.png?rs=AGWjSYSQINQ0zJXJLGkr5Z8VKHVhVMze4w&sqp=-oaymwEKCIwBEIwBIABQAQjfrpnHBQ",
+      "primaryColor": "#333332"
+    },
+    {
+      "id": "error-prone",
+      "name": "Error Prone",
+      "summary": "A bug detection tool for Java code, integrated into the Java compiler"
+    },
+    {
+      "id": "ezgantt",
+      "name": "EZ Gantt",
+      "summary": "Easily view a Google Spreadsheet as a Gantt Chart",
+      "iconUrlSmall": "https://opensource.google.com/project-images/ezgantt/logo.png?rs=AGWjSYTvW-dyR7_TjWSwqRL1x-0BeMnmbA&sqp=-oaymwEICEwQTCAAUAEI4K6ZxwU",
+      "iconUrlMedium": "https://opensource.google.com/project-images/ezgantt/logo.png?rs=AGWjSYS-KnBXGkVt6GcJQ14XSoj7ymxdRA&sqp=-oaymwEKCIwBEIwBIABQAQjgrpnHBQ",
+      "primaryColor": "#A59B94"
+    },
+    {
+      "id": "flexbox-layout",
+      "name": "flexbox-layout",
+      "summary": "Flexbox for Android"
+    },
+    {
+      "id": "flutter",
+      "name": "Flutter",
+      "summary": "Build high-fidelity apps for iOS and Android from a single codebase",
+      "iconUrlSmall": "https://opensource.google.com/project-images/flutter/logo.png?rs=AGWjSYRATCsNSR_geP3lRV2jzY7UbMYLaQ&sqp=-oaymwEICEwQTCAAUAEI466ZxwU",
+      "iconUrlMedium": "https://opensource.google.com/project-images/flutter/logo.png?rs=AGWjSYRbL-it70pabUqbse4dA5yn7YcdDg&sqp=-oaymwEKCIwBEIwBIABQAQjjrpnHBQ",
+      "primaryColor": "#4CC2F7"
+    },
+    {
+      "id": "fontdiff",
+      "name": "FontDiff",
+      "summary": "A tool for finding visual differences between font versions"
+    },
+    {
+      "id": "fontview",
+      "name": "FontView",
+      "summary": "A demo app that displays fonts using a free/libre/open-source text rendering stack"
+    },
+    {
+      "id": "ganeti",
+      "name": "Ganeti",
+      "summary": "A virtual machine cluster management tool",
+      "iconUrlSmall": "https://opensource.google.com/project-images/ganeti/logo.png?rs=AGWjSYTzD4PN6zDWcSqX8bnSOBnTSPaBbQ&sqp=-oaymwEICEwQTCAAUAEI5q6ZxwU",
+      "iconUrlMedium": "https://opensource.google.com/project-images/ganeti/logo.png?rs=AGWjSYQ6LZXM7mqaMO5_crs5_XMKBsulMA&sqp=-oaymwEKCIwBEIwBIABQAQjmrpnHBQ",
+      "primaryColor": "#B5D1FA"
+    },
+    {
+      "id": "genomewarp",
+      "name": "GenomeWarp",
+      "summary": "GenomeWarp translates genetic variants from one genome assembly version to another"
+    },
+    {
+      "id": "go",
+      "name": "Go",
+      "summary": "Go is an open source programming language that makes it easy to build simple, reliable, and efficient software",
+      "iconUrlSmall": "https://opensource.google.com/project-images/go/logo.png?rs=AGWjSYQfGiUnQEfaGFsDtgmKRXsVj3u3Rg&sqp=-oaymwEICEwQTCAAUAEI6a6ZxwU",
+      "iconUrlMedium": "https://opensource.google.com/project-images/go/logo.png?rs=AGWjSYT2et4bXiV214V_J65gykQDYmnttw&sqp=-oaymwEKCIwBEIwBIABQAQjprpnHBQ",
+      "primaryColor": "#6FD6E2"
+    },
+    {
+      "id": "go-github",
+      "name": "go-github",
+      "summary": "Go library for accessing the GitHub API"
+    },
+    {
+      "id": "google-authenticator-libpam",
+      "name": "Google Authenticator PAM module",
+      "summary": "HOTP/TOTP second factor PAM module"
+    },
+    {
+      "id": "grpc",
+      "name": "gRPC",
+      "summary": "A high-performance universal RPC framework",
+      "iconUrlSmall": "https://opensource.google.com/project-images/grpc/logo.png?rs=AGWjSYSyep7cb6Rt6yrWQ2_tCLg85MrcTA&sqp=-oaymwEICEwQTCAAUAEI7q6ZxwU",
+      "iconUrlMedium": "https://opensource.google.com/project-images/grpc/logo.png?rs=AGWjSYS2HA6btAx_CTn_oImfliY8td7kcA&sqp=-oaymwEKCIwBEIwBIABQAQjurpnHBQ",
+      "primaryColor": "#2B97A0"
+    },
+    {
+      "id": "hilbert",
+      "name": "Hilbert",
+      "summary": "Go package for mapping values to and from space-filling curves, such as Hilbert and Peano curves",
+      "iconUrlSmall": "https://opensource.google.com/project-images/hilbert/logo.png?rs=AGWjSYSqHBkl4_BH1S1eWxQt-CIhO2R8Hg&sqp=-oaymwEICEwQTCAAUAEI8a6ZxwU",
+      "iconUrlMedium": "https://opensource.google.com/project-images/hilbert/logo.png?rs=AGWjSYRbC0TmH7SutWVtBI9UWvzPRdUDDA&sqp=-oaymwEKCIwBEIwBIABQAQjxrpnHBQ",
+      "primaryColor": "#323232"
+    },
+    {
+      "id": "hstspreload",
+      "name": "HSTS Preload List",
+      "summary": "The submission website for the Chromium-maintained HSTS preload list, which is used by major browsers to hardcode HTTPS-only sites",
+      "iconUrlSmall": "https://opensource.google.com/project-images/hstspreload/logo.svg",
+      "iconUrlMedium": "https://opensource.google.com/project-images/hstspreload/logo.svg",
+      "primaryColor": "#1ac222"
+    },
+    {
+      "id": "jterm-cswithandroid",
+      "name": "JTerm at Smith 2017 Course Materials: CS With Android",
+      "summary": "Starter code and example solutions for JTerm course, CS with Android, in January 2017"
+    },
+    {
+      "id": "kubernetes",
+      "name": "Kubernetes",
+      "summary": "Automated container deployment, scaling, and management",
+      "iconUrlSmall": "https://opensource.google.com/project-images/kubernetes/logo.svg",
+      "iconUrlMedium": "https://opensource.google.com/project-images/kubernetes/logo.svg",
+      "primaryColor": "#326ce5"
+    },
+    {
+      "id": "magenta",
+      "name": "Magenta",
+      "summary": "Magenta: Music and Art Generation with Machine Intelligence",
+      "iconUrlSmall": "https://opensource.google.com/project-images/magenta/logo.png?rs=AGWjSYQliiaYtzPdgVP4e_ApsOy2NmG05w&sqp=-oaymwEICEwQTCAAUAEI-a6ZxwU",
+      "iconUrlMedium": "https://opensource.google.com/project-images/magenta/logo.png?rs=AGWjSYQHEsAlcRYQINM7J-Qof-s8IBWInA&sqp=-oaymwEKCIwBEIwBIABQAQj5rpnHBQ",
+      "primaryColor": "#06213C"
+    },
+    {
+      "id": "mail-importer",
+      "name": "Mail Importer for Gmail",
+      "summary": "Mail Importer for Gmail will upload the contents of a Thunderbird mail archive to Gmail and do its best to preserve the read state, flagged state, and folders of the messages"
+    },
+    {
+      "id": "material-components-ios",
+      "name": "Material Components for iOS",
+      "summary": "Modular and customizable Material Design UI components for iOS",
+      "iconUrlSmall": "https://opensource.google.com/project-images/material-components-ios/logo.png?rs=AGWjSYT9MMo1MwApXs8LFISwz7SOOd1T2Q&sqp=-oaymwEICEwQTCAAUAEI0NSZxwU",
+      "iconUrlMedium": "https://opensource.google.com/project-images/material-components-ios/logo.png?rs=AGWjSYSBRBLDxABnpfAdZZuDykdr2qYPMw&sqp=-oaymwEKCIwBEIwBIABQAQjQ1JnHBQ",
+      "primaryColor": "#00e676"
+    },
+    {
+      "id": "mcm",
+      "name": "Minimal Configuration Manager",
+      "summary": "A suite of tools to provide configuration management"
+    },
+    {
+      "id": "moe",
+      "name": "MOE: Make Open Easy",
+      "summary": "Synchronizes, translates, and scrubs source code repositories"
+    },
+    {
+      "id": "ndprbrd",
+      "name": "ndprbrd",
+      "summary": "NDP Routing Bridge Daemon"
+    },
+    {
+      "id": "neuroglancer",
+      "name": "Neuroglancer",
+      "summary": "WebGL-based viewer for volumetric data"
+    },
+    {
+      "id": "nomulus",
+      "name": "Nomulus",
+      "summary": "Top-level domain name registry software on Google Cloud Platform"
+    },
+    {
+      "id": "noto",
+      "name": "Noto Fonts",
+      "summary": "Fonts aiming to support all languages with a harmonious look and feel"
+    },
+    {
+      "id": "oppia",
+      "name": "Oppia",
+      "summary": "A tool for collaboratively creating and sharing interactive online lessons",
+      "iconUrlSmall": "https://opensource.google.com/project-images/oppia/logo.png?rs=AGWjSYT0px1Qgzqyku0ioDZoIY_tmYQ8Jw&sqp=-oaymwEICEwQTCAAUAEIha-ZxwU",
+      "iconUrlMedium": "https://opensource.google.com/project-images/oppia/logo.png?rs=AGWjSYRczWzFY_pGHua8iLVza6YlDSswXg&sqp=-oaymwEKCIwBEIwBIABQAQiFr5nHBQ",
+      "primaryColor": "#16AA9D"
+    },
+    {
+      "id": "permission.site",
+      "name": "permission.site",
+      "summary": "A site to test the interaction of web APIs and browser permissions",
+      "iconUrlSmall": "https://opensource.google.com/project-images/permission.site/logo.png?rs=AGWjSYR0K4FuyKbmNaEbBXyUEQryY6qqiQ&sqp=-oaymwEICEwQTCAAUAEIiq-ZxwU",
+      "iconUrlMedium": "https://opensource.google.com/project-images/permission.site/logo.png?rs=AGWjSYTOKGVJGNwfkHU4AX4Lm95MFnAV1w&sqp=-oaymwEKCIwBEIwBIABQAQiKr5nHBQ",
+      "primaryColor": "#545454"
+    },
+    {
+      "id": "polymer",
+      "name": "Polymer",
+      "summary": "A lightweight library built on top of the Web Components standard",
+      "iconUrlSmall": "https://opensource.google.com/project-images/polymer/logo.png?rs=AGWjSYQq-Delb7muWCKagdMPnOxA99puwQ&sqp=-oaymwEICEwQTCAAUAEIja-ZxwU",
+      "iconUrlMedium": "https://opensource.google.com/project-images/polymer/logo.png?rs=AGWjSYQFvX5qGmLyzniVGDtvW7wtov1Xmw&sqp=-oaymwEKCIwBEIwBIABQAQiNr5nHBQ",
+      "primaryColor": "#337FCC"
+    },
+    {
+      "id": "prob.js",
+      "name": "Prob.js",
+      "summary": "Generate random numbers from different probability distributions"
+    },
+    {
+      "id": "protobuf",
+      "name": "Protobuf",
+      "summary": "Google's data interchange format"
+    },
+    {
+      "id": "python-fanotify",
+      "name": "fanotify Bindings for Python",
+      "summary": "Python bindings for Linux's fanotify API"
+    },
+    {
+      "id": "radioreceiver",
+      "name": "Radio Receiver",
+      "summary": "An application to listen to broadcast stereo FM and AM radio from your Chrome browser or your ChromeBook computer using a $15 USB digital TV tuner",
+      "iconUrlSmall": "https://opensource.google.com/project-images/radioreceiver/logo.png?rs=AGWjSYQ06IRW0kUOYsBW2icvoMlyUfjs-Q&sqp=-oaymwEICEwQTCAAUAEIk6-ZxwU",
+      "iconUrlMedium": "https://opensource.google.com/project-images/radioreceiver/logo.png?rs=AGWjSYQVC_METxfpfHz49KuBwhXdBVlSRQ&sqp=-oaymwEKCIwBEIwBIABQAQiTr5nHBQ",
+      "primaryColor": "#AA7522"
+    },
+    {
+      "id": "remixer",
+      "name": "Remixer",
+      "summary": "A set of cross-platform libraries and protocols to allow the sharing of design values and live refinement of apps during the development process",
+      "iconUrlSmall": "https://opensource.google.com/project-images/remixer/logo.png?rs=AGWjSYTDAiDG9zw0hADaFVJgfhYdRj2OeA&sqp=-oaymwEICEwQTCAAUAEIlK-ZxwU",
+      "iconUrlMedium": "https://opensource.google.com/project-images/remixer/logo.png?rs=AGWjSYTMSoSBTPVCbyqZcubbYOX0n0xZjg&sqp=-oaymwEKCIwBEIwBIABQAQiUr5nHBQ",
+      "primaryColor": "#E783FB"
+    },
+    {
+      "id": "science-journal",
+      "name": "Open Science Journal",
+      "summary": "Science Journal Android code",
+      "iconUrlSmall": "https://opensource.google.com/project-images/science-journal/logo.png?rs=AGWjSYR42Ogl_B59X7P9_5dxsxdA4qq7fw&sqp=-oaymwEICEwQTCAAUAEIl6-ZxwU",
+      "iconUrlMedium": "https://opensource.google.com/project-images/science-journal/logo.png?rs=AGWjSYQKgT5kb6XYwkBofW6CgYqcpIAxbQ&sqp=-oaymwEKCIwBEIwBIABQAQiXr5nHBQ",
+      "primaryColor": "#3C7CE9"
+    },
+    {
+      "id": "science-journal-arduino",
+      "name": "science-journal-arduino",
+      "summary": "Science Journal Arduino Firmware"
+    },
+    {
+      "id": "sketch-rtl",
+      "name": "RTL Sketch Plugin",
+      "summary": "Automatically create RTL layouts of your designs with this plugin for Bohemian Coding's Sketch 3"
+    },
+    {
+      "id": "snazzymaps-browser",
+      "name": "Snazzymaps Browser",
+      "summary": "Android app for searching and browsing Snazzy Maps"
+    },
+    {
+      "id": "squidwarden",
+      "name": "squidwarden",
+      "summary": "Frontend to squid to manage ACLs"
+    },
+    {
+      "id": "ssh-scripts",
+      "name": "ssh-scripts",
+      "summary": "Some SSH-related scripts"
+    },
+    {
+      "id": "syntaxnet",
+      "name": "SyntaxNet",
+      "summary": "A TensorFlow based NLU toolkit"
+    },
+    {
+      "id": "tensorflow",
+      "name": "TensorFlow",
+      "summary": "TensorFlow is a fast, flexible, and scalable open source machine learning library for research and production",
+      "iconUrlSmall": "https://opensource.google.com/project-images/tensorflow/logo.png?rs=AGWjSYQfsroY5w-Fs-y5Y73ous4yyBvO2A&sqp=-oaymwEICEwQTCAAUAEIoq-ZxwU",
+      "iconUrlMedium": "https://opensource.google.com/project-images/tensorflow/logo.png?rs=AGWjSYSGZ0KvvOJy9VoQSeEo53iKWZ0jSA&sqp=-oaymwEKCIwBEIwBIABQAQiir5nHBQ",
+      "primaryColor": "#E26026"
+    },
+    {
+      "id": "tesseract",
+      "name": "Tesseract OCR",
+      "summary": "An optical character recognition (OCR) engine"
+    },
+    {
+      "id": "three-things-today",
+      "name": "three-things-today",
+      "summary": "Simple Android application to encourage writing down three things that happened today"
+    },
+    {
+      "id": "touchtime",
+      "name": "TouchTime",
+      "summary": "Tells the time through vibration patterns on an Android smartwatch",
+      "iconUrlSmall": "https://opensource.google.com/project-images/touchtime/logo.png?rs=AGWjSYRS2RmP5UUu8Xg28-H_a2sXom2gOg&sqp=-oaymwEICEwQTCAAUAEIpa-ZxwU",
+      "iconUrlMedium": "https://opensource.google.com/project-images/touchtime/logo.png?rs=AGWjSYRqHTln4mbX6s4OP06N-D9uHJu73g&sqp=-oaymwEKCIwBEIwBIABQAQilr5nHBQ",
+      "primaryColor": "#DC4538"
+    },
+    {
+      "id": "upspin",
+      "name": "Upspin",
+      "summary": "An experimental framework for naming and sharing files and other data securely, uniformly, and globally",
+      "iconUrlSmall": "https://opensource.google.com/project-images/upspin/logo.png?rs=AGWjSYRoBMaOz_YhIGyeelw5SvztWM4bxw&sqp=-oaymwEICEwQTCAAUAEIqK-ZxwU",
+      "iconUrlMedium": "https://opensource.google.com/project-images/upspin/logo.png?rs=AGWjSYSbsMG0jPV_a6wexG8GxS4WEWHiFw&sqp=-oaymwEKCIwBEIwBIABQAQior5nHBQ",
+      "primaryColor": "#fffce6"
+    },
+    {
+      "id": "vim-plugins",
+      "name": "Google Vim plugins",
+      "summary": "Plugins to enhance the Vim text editor"
+    },
+    {
+      "id": "zopfli",
+      "name": "Zopfli",
+      "summary": "Zopfli is a compression library designed to be very good, but slow"
+    }
+  ],
+  "totalSize": 67
+}
