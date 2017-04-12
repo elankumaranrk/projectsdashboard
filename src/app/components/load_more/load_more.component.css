@@ -1,0 +1,17 @@
+:host {
+  display: block;
+  margin: 0 auto;
+  padding: 0 0 100px 0;
+  text-align: center;
+}
+
+:host .text-btn,
+:host .text-btn span {
+  display: inline-block;
+}
+
+:host .text-btn span {
+  height: 9px;
+  margin: 0 0 0 5px;
+  width: 13px;
+}

@@ -1,0 +1,79 @@
+:host {
+  display: block;
+  max-width: 460px;
+  position: relative;
+  z-index: 3;
+}
+
+:host>div {
+  position: relative;
+}
+
+:host>div.active span {
+  background-color: #585858;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+:host form input {
+  background-color: none;
+  border: none;
+  border-bottom: solid 5px rgba(255, 255, 255, 0.1);
+  border-radius: 0;
+  box-sizing: border-box;
+  color: white;
+  font-family: 'Roboto Slab', serif;
+  font-size: 14px;
+  height: 35px;
+  outline: none;
+  padding: 0 0 5px 0;
+  position: relative;
+  text-indent: 27px;
+  width: 100%;
+  z-index: 2;
+}
+
+:host form span {
+  background-color: #474747;
+  cursor: pointer;
+  height: 30px;
+  position: absolute;
+  right: 0;
+  text-indent: -9999px;
+  top: 0;
+  width: 30px;
+  z-index: 3;
+}
+
+:host ul {
+  background: #585858;
+  left: 0;
+  margin: 0 -20px;
+  padding: 51px 20px 10px 20px;
+  position: absolute;
+  top: -10px;
+  width: 100%;
+}
+
+:host li h6 {
+  margin: 0;
+}
+
+:host li h6 a {
+  color: #ffffff;
+  display: block;
+  font-size: 14px;
+  padding: 4px 28px;
+  text-decoration: none;
+  text-transform: none;
+}
+
+:host li h6 a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+@media (min-width: 720px) {
+   :host form input {
+    font-size: 20px;
+  }
+}

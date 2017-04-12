@@ -1,0 +1,16 @@
+:host {
+  display: block;
+}
+
+:host div {
+  color: inherit;
+}
+
+:host svg {
+  display: block;
+  fill: currentColor;
+  margin: 0 auto;
+  -o-object-fit: contain;
+  object-fit: contain;
+  width: 60%;
+}

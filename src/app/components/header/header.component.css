@@ -1,0 +1,42 @@
+.col-wrap {
+  position: relative;
+}
+
+.col-wrap h2 {
+  margin-bottom: 22px;
+}
+
+nav {
+  display: none;
+}
+
+@media (min-width: 720px) {
+  nav {
+    bottom: 4px;
+    display: block;
+    position: absolute;
+    right: 0;
+  }
+  nav div {
+    display: inline-block;
+  }
+  nav a,
+  nav p {
+    color: #ffffff;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 23px;
+    margin: 0 0 0 8px;
+    text-transform: uppercase;
+  }
+  nav a {
+    cursor: pointer;
+    opacity: 0.2;
+    -webkit-transition: opacity 0.2s ease-out;
+    transition: opacity 0.2s ease-out;
+  }
+  nav .active,
+  nav a:hover {
+    opacity: 1;
+  }
+}

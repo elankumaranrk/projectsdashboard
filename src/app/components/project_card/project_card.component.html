@@ -1,0 +1,14 @@
+<a href="#" [routerLink]="['/', project.id]" class="project-card" (mouseenter)="this.hoverCard($event)" (mouseleave)="this.hoverCard($event)"
+  (click)="loadProjectDetails($event, project)">
+  <div class="card-header">
+    <node-background [class]="randomClass" [size]="{ width: '143px', height: '118px' }" [zoomed]="hovered" [color]="hoverColor">
+    </node-background>
+    <div>
+      <h3>{{project.name}}</h3>
+      <div class="logo" [ngStyle]="{'borderColor': color, 'color': color}">
+        <logo-font *ngIf="!project.iconUrlMedium" [character]="project.startsWith"> </logo-font> <img *ngIf="project.iconUrlMedium" src="{{project.iconUrlMedium}}" alt="{{project.name}} logo" (error)="project.iconUrlMedium = null">        </div>
+    </div>
+  </div>
+  <div class="card-body">
+    <p>{{project.summary}}</p> <a class="text-btn" (click)="loadProjectDetails($event, project)">      View Project    </a>    </div>
+</a>

@@ -1,0 +1,6 @@
+:host>div {
+  background: white;
+  min-height: 100vh;
+  position: relative;
+  z-index: 2;
+}

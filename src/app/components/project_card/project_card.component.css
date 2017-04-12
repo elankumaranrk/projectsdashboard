@@ -1,0 +1,134 @@
+:host .project-card {
+  background: #ffffff;
+  box-shadow: 0 0.13em 3px 0.04em rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  display: block;
+  font-weight: normal;
+  -webkit-transition: box-shadow 0.1s ease-out;
+  transition: box-shadow 0.1s ease-out;
+}
+
+:host .project-card:hover {
+  box-shadow: 0 0.2em 6px 0.1em rgba(0, 0, 0, 0.15);
+}
+
+:host .project-card .card-header {
+  background: #f7f7f7;
+  background: -webkit-linear-gradient(left, #fcfcfc 0%, #f7f7f7 100%);
+  background: linear-gradient(to right, #fcfcfc 0%, #f7f7f7 100%);
+  overflow: hidden;
+  position: relative;
+}
+
+:host .project-card .card-header>div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 120px;
+  padding: 0 20px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+:host .project-card .card-header h3 {
+  display: -webkit-box;
+  float: left;
+  font-size: 24px;
+  line-height: 32px;
+  margin: 0 81px 0 0;
+  max-height: 95px;
+  overflow: hidden;
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+:host .project-card .card-header .logo {
+  background: white;
+  border: solid 5px #888888;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 70px;
+  margin-top: -40px;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  -webkit-transition: -webkit-transform 0.2s ease-in;
+  transition: -webkit-transform 0.2s ease-in;
+  transition: transform 0.2s ease-in;
+  transition: transform 0.2s ease-in, -webkit-transform 0.2s ease-in;
+  width: 70px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+:host .project-card .card-header .logo img,
+:host .project-card .card-header .logo svg {
+  display: block;
+  margin: 0 auto;
+  -o-object-fit: contain;
+  object-fit: contain;
+  width: 50%;
+}
+
+:host .project-card:hover .card-header .logo,
+:host .project-card:hover .card-header .logo {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+:host .project-card .card-body {
+  padding: 20px;
+}
+
+:host .project-card .card-body p {
+  display: -webkit-box;
+  font-size: 16px;
+  height: 136px;
+  margin: 0;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+}
+
+@-webkit-keyframes zoom-out-and-in {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  80% {
+    -webkit-transform: scale(0.95);
+    transform: scale(0.95);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes zoom-out-and-in {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  80% {
+    -webkit-transform: scale(0.95);
+    transform: scale(0.95);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}

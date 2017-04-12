@@ -1,0 +1,138 @@
+.explore-projects {
+  opacity: 0;
+  padding: 0 0 80px 0;
+  -webkit-transition: opacity 1s ease-out;
+  transition: opacity 1s ease-out;
+}
+
+.explore-projects.loaded {
+  opacity: 1;
+}
+
+:host .error h5 {
+  margin-top: 60px;
+}
+
+:host .explore-container {
+  position: relative;
+}
+
+:host canvas {
+  display: block;
+  margin: 0 auto;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+:host .selected-project {
+  -webkit-animation: none;
+  animation: none;
+  border-radius: 50%;
+  height: 350px;
+  left: 50%;
+  margin: -175px 0 0 -175px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  width: 350px;
+}
+
+:host .selected-project a {
+  opacity: 0;
+}
+
+:host .selected-project.active,
+:host .selected-project.active a {
+  -webkit-animation: fade-in 1s ease-in-out forwards;
+  animation: fade-in 1s ease-in-out forwards;
+}
+
+:host .selected-project .project-summary {
+  height: 260px;
+}
+
+:host .selected-project h5,
+:host .selected-project p,
+:host .selected-project a {
+  margin: 0 15px 15px 15px;
+}
+
+:host .selected-project img {
+  margin: 30px auto 0 auto;
+}
+
+:host .selected-project p {
+  font-size: 14px;
+  line-height: 18px;
+  max-height: 145px;
+  overflow: hidden;
+}
+
+:host .page {
+  -webkit-animation: fade-in 2s ease-in-out 1s forwards;
+  animation: fade-in 2s ease-in-out 1s forwards;
+  background: url(\"/assets/images/chevron-dark.svg\") 0 0 no-repeat;
+  cursor: pointer;
+  height: 15px;
+  left: 10px;
+  margin: -15px 0 0 0;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  text-indent: -9999px;
+  top: 50%;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  -webkit-transform-origin: center;
+  transform-origin: center;
+  -webkit-transition: -webkit-transform 0.1s ease-in;
+  transition: -webkit-transform 0.1s ease-in;
+  transition: transform 0.1s ease-in;
+  transition: transform 0.1s ease-in, -webkit-transform 0.1s ease-in;
+  width: 20px;
+}
+
+:host .page.next {
+  left: auto;
+  right: 10px;
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
+:host .page:hover {
+  -webkit-transform: rotate(90deg) scale(1.4);
+  transform: rotate(90deg) scale(1.4);
+}
+
+:host .page.next:hover {
+  -webkit-transform: rotate(-90deg) scale(1.4);
+  transform: rotate(-90deg) scale(1.4);
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

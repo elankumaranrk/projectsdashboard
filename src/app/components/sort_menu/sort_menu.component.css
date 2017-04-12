@@ -1,0 +1,55 @@
+:host {
+  display: block;
+  padding: 10px 0;
+  position: relative;
+  text-align: right;
+  width: 178px;
+}
+
+:host>a {
+  color: #444444;
+  display: block;
+  font-size: 14px;
+  line-height: 30px;
+  margin: 0;
+  overflow: hidden;
+  text-transform: uppercase;
+}
+
+:host>a.active .down-dark {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+:host>a span {
+  float: left;
+  margin: 0 0 0 10px;
+}
+
+:host>a .down-dark {
+  float: right;
+  margin: -2px -9px 0 0;
+}
+
+:host ul {
+  background: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.28);
+  height: 84px;
+  position: absolute;
+  right: 0;
+  text-align: left;
+  width: 170px;
+  z-index: 1;
+}
+
+:host ul a {
+  color: #444444;
+  display: block;
+  font-weight: 400;
+  padding: 10px 20px;
+  text-transform: none;
+}
+
+:host ul a:hover {
+  background: #f2f2f2;
+}

@@ -1,0 +1,169 @@
+:host .node-graphic {
+  color: #dedede;
+  display: block;
+  margin: 0 -33px 0 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+:host svg {
+  display: block;
+  fill: currentColor;
+  -o-object-fit: contain;
+  object-fit: contain;
+  -webkit-transition: all 0.3s ease-in 0.25s;
+  transition: all 0.3s ease-in 0.25s;
+}
+
+:host .node-graphic svg,
+:host .node-graphic div {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+:host .node-graphic .base,
+:host .node-graphic.zoomed .deeper,
+:host .node-graphic.zoomed .deepest {
+  opacity: 0.8;
+  -webkit-transform: scale(1.6) rotate(-69deg);
+  transform: scale(1.6) rotate(-69deg);
+  -webkit-transition: all 0.55s cubic-bezier(0.165, 0.840, 0.440, 1.000);
+  transition: all 0.55s cubic-bezier(0.165, 0.840, 0.440, 1.000);
+}
+
+:host .node-graphic .deeper {
+  opacity: 0;
+  -webkit-transform: scale(0) rotate(-145deg);
+  transform: scale(0) rotate(-145deg);
+}
+
+:host .node-graphic.zoomed .deeper {
+  opacity: 1;
+  -webkit-transform: scale(1.6) rotate(-120deg);
+  transform: scale(1.6) rotate(-120deg);
+}
+
+:host .node-graphic.zoomed {
+  margin: 0 -33px 0 0 !important;
+}
+
+:host .node-graphic.zoomed .base {
+  opacity: 0;
+  -webkit-transform: scale(2.7) rotate(-69deg);
+  transform: scale(2.7) rotate(-69deg);
+}
+
+:host .node-graphic .deepest {
+  display: none;
+}
+
+:host .node-graphic.hero {
+  background: none;
+  right: 27px;
+}
+
+:host .node-graphic.hero::after {
+  display: none;
+}
+
+:host .node-graphic.hero .no-fill {
+  color: #dedede;
+}
+
+:host .node-graphic.hero.zoomed {
+  margin: -35px 0 0 0 !important;
+}
+
+:host .node-graphic.hero .deeper {
+  -webkit-transform: scale(0) rotate(20deg);
+  transform: scale(0) rotate(20deg);
+}
+
+:host .node-graphic.hero.zoomed .deeper {
+  margin: -124px 0 0 98px;
+  -webkit-transform: scale(0.8) rotate(-119deg);
+  transform: scale(0.8) rotate(-119deg);
+}
+
+:host .node-graphic.hero .deepest {
+  margin: 185px 0 0 -232px;
+  -webkit-transform: scale(1) rotate(-268deg);
+  transform: scale(1) rotate(-268deg);
+}
+
+:host .node-graphic.hero.zoomed .deepest {
+  margin: 139px 0 0 -232px;
+  -webkit-transform: scale(1.45) rotate(-268deg);
+  transform: scale(1.45) rotate(-268deg);
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+
+:host .node-graphic.two {
+  margin: 20px -38px 0 0;
+}
+
+:host .node-graphic.two .base {
+  -webkit-transform: scale(1.6) rotate(-27deg);
+  transform: scale(1.6) rotate(-27deg);
+}
+
+:host .node-graphic.two.zoomed .base {
+  -webkit-transform: scale(2.7) rotate(-27deg);
+  transform: scale(2.7) rotate(-27deg);
+}
+
+:host .node-graphic.three .base {
+  margin: -16px -33px 0 0;
+}
+
+:host .node-graphic.three .base {
+  -webkit-transform: scale(1.5) rotate(-120deg);
+  transform: scale(1.5) rotate(-120deg);
+}
+
+:host .node-graphic.three.zoomed .base {
+  -webkit-transform: scale(2.7) rotate(-120deg);
+  transform: scale(2.7) rotate(-120deg);
+}
+
+:host .node-graphic.three .deeper {
+  -webkit-transform: scale(0) rotate(-80deg);
+  transform: scale(0) rotate(-80deg);
+}
+
+:host .node-graphic.three.zoomed .deeper {
+  margin: 20px -5px 0 0;
+  -webkit-transform: scale(1.7) rotate(-30deg);
+  transform: scale(1.7) rotate(-30deg);
+}
+
+@media (min-width: 720px) {
+   :host .node-graphic.hero.zoomed {
+    margin: -118px 0 0 0 !important;
+  }
+   :host .node-graphic.hero .deeper {
+    -webkit-transform: scale(0) rotate(20deg);
+    transform: scale(0) rotate(20deg);
+  }
+   :host .node-graphic.hero.zoomed .deeper {
+    margin: 0;
+    -webkit-transform: scale(1.1) rotate(-26deg);
+    transform: scale(1.1) rotate(-26deg);
+  }
+   :host .node-graphic.hero .deepest {
+    display: block;
+    margin: 185px 0 0 -232px;
+    -webkit-transform: scale(0.6) rotate(-268deg);
+    transform: scale(0.6) rotate(-268deg);
+  }
+   :host .node-graphic.hero.zoomed .deepest {
+    margin: 139px 0 0 -300px;
+    -webkit-transform: scale(1.1) rotate(-268deg);
+    transform: scale(1.1) rotate(-268deg);
+    -webkit-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+  }
+}

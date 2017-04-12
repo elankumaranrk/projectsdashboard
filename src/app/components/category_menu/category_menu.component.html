@@ -1,0 +1,16 @@
+<div [ngClass]="{ active: dropdownActive }" (click)="$event.stopPropagation()">
+  <form class="category_menu" novalidate>
+    <input type="text" class="search" name="selectedCategory" autocomplete="off" #catSelect [placeholder]="categories_service.selectedCategory.cat || ''"
+      [(ngModel)]="inputVal" (focus)="dropdownActive = true" (keyup)="handleKeyUp($event, catSelect.value)" (input)="handleKeyUp($event, catSelect.value)">
+    <span class="down-light" (click)="dropdownActive = !dropdownActive">Toggle categories</span>
+  </form>
+  <ul *ngIf="dropdownActive">
+    <li *ngFor="let category of categories_service.allCategories">
+      <h6>
+        <a href="#" (click)="setCategory($event, category);categories_service.dirty = false">
+              {{category.cat}}
+              </a>
+      </h6>
+    </li>
+  </ul>
+</div>

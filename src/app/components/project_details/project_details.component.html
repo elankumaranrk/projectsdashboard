@@ -1,0 +1,80 @@
+<section class="projects-list error" [hidden]="!projects_service.APIError">
+  <div class="col-wrap">
+    <h5>No Results found.</h5>
+  </div>
+</section>
+<div class="project-details" [ngClass]="{ 'active' : projects_service.hasLoaded }">
+  <section class="hero short light">
+    <div class="col-wrap">
+      <div class="project-heading">
+        <node-background [class]="'hero'" [size]="{ width: '243px', height: '195px' }" [zoomed]="projects_service.hasLoaded"
+          [color]="color"> </node-background>
+        <h2>{{projects_service.project.name}}</h2> <a href="{{projects_service.project.websiteUrl}}" target="_blank">          {{prettyUrl}}        </a>        </div>
+      <div class="logo" [ngStyle]="{          'borderColor': color,          'color': color        }">
+        <logo-font *ngIf="!projects_service.project.iconUrlMedium" [character]="projects_service.project.startsWith"> </logo-font> <img *ngIf="projects_service.project.iconUrlMedium" src="{{projects_service.project.iconUrlMedium}}"
+          alt="{{projects_service.project.name}} logo" (error)="projects_service.project.iconUrlMedium = null"> </div>
+    </div>
+  </section>
+  <section class="project">
+    <div class="col-wrap">
+      <div class="col med-span-9 summary">
+        <h5>{{projects_service.project.summary}}</h5>
+        <div [innerHtml]="projects_service.project.description"></div>
+        <div *ngIf="projects_service.project.googleUse">
+          <h5>How Google uses {{projects_service.project.name}}</h5>
+          <div [innerHtml]="projects_service.project.googleUse"></div>
+        </div>
+        <h5>Source Code</h5>
+        <table>
+          <tr>
+            <th>Repo</th>
+            <th>License</th>
+            <th colspan="2"></th>
+          </tr>
+          <tr *ngFor="let repo of projects_service.project.repositories">
+            <td> <a href="{{repo.url}}" target="_blank" (click)="config_service.TRACK_EVENT(                'Projects_Details_' + projects_service.project.name,                'Click',                'Repo ' + repo.name)">                {{repo.name}}              </a>              </td>
+            <td>{{repo.license}}</td>
+            <td *ngIf="repo.githubStars > 0">{{repo.githubStars}} Stars</td>
+            <td *ngIf="repo.githubForks > 0">{{repo.githubForks}} Forks</td>
+          </tr>
+        </table>
+        <div class="more-info" *ngIf="projects_service.project.moreInfo">
+          <h5>More Info</h5>
+          <ul>
+            <li *ngFor="let info of projects_service.project.moreInfo"> <a href="{{info.url}}" target="_blank" (click)="config_service.TRACK_EVENT(                  'Projects_Details_' + projects_service.project.name,                  'Click',                  'More Info ' + info.title)">                {{info.title}}              </a>              </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col med-span-3 side-bar">
+        <div *ngIf="projects_service.project.categories">
+          <h6>Categories</h6>
+          <ul>
+            <li *ngFor="let cat of projects_service.project.categories"> <a href="#" [routerLink]="['/list', cat]" (click)="config_service.TRACK_EVENT(                  'Projects_Details_' + projects_service.project.name,                  'Click',                  'Categories ' + cat)">                {{cat}}              </a>              </li>
+          </ul>
+        </div>
+        <div *ngIf="projects_service.project.languages">
+          <h6>Languages</h6>
+          <ul>
+            <li *ngFor="let lang of projects_service.project.languages"> <a href="#" [routerLink]="['/search']" [queryParams]="{ q: ' ', language: lang }" (click)="config_service.TRACK_EVENT(                  'Projects_Details_' + projects_service.project.name,                  'Click',                  'Languages ' + lang)">                {{lang}}              </a>              </li>
+          </ul>
+        </div>
+        <div *ngIf="projects_service.project.tags">
+          <h6>Tags</h6>
+          <ul>
+            <li *ngFor="let tag of projects_service.project.tags"> <a href="#" [routerLink]="['/search']" [queryParams]="{ q:'tag:' + tag }" (click)="config_service.TRACK_EVENT(                  'Projects_Details_' + projects_service.project.name,                  'Click',                  'Tags ' + tag)">                {{tag}}              </a>              </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="related projects-list" *ngIf="projects_service.project.relatedTo">
+    <div class="col-wrap">
+      <h5>Related Projects</h5>
+    </div>
+    <div class="col-wrap project-cards">
+      <div class="col wide-span-4 med-span-6 project" *ngFor="let project of projects_service.project.relatedTo">
+        <project-card [project]="project"></project-card>
+      </div>
+    </div>
+  </section>
+</div>

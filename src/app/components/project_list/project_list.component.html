@@ -1,0 +1,23 @@
+<header></header>
+<section class="projects-filters">
+  <div class="col-wrap">
+    <language-filter></language-filter>
+  </div>
+</section>
+<section class="projects-list" [ngClass]="{ 'active' : projects_service.hasLoaded }">
+  <div class="col-wrap">
+    <p class="pull-left search-count" *ngIf="deeplink_service.currentPage === 'search'"> <strong>{{projects_service.displaySize}}</strong> <span *ngIf="projects_service.displaySize === 1">        result <span *ngIf="deeplink_service.query !== ' '">for</span>      </span> <span *ngIf="projects_service.displaySize !== 1">        results <span *ngIf="deeplink_service.query !== ' '">for</span>      </span> <strong>{{deeplink_service.query}}</strong> </p>
+    <sort-menu class="pull-right"></sort-menu>
+  </div>
+  <section class="error" [hidden]="!projects_service.APIError || deeplink_service.currentPage === 'search'">
+    <div class="col-wrap">
+      <h5>No Results found.</h5>
+    </div>
+  </section>
+  <div class="col-wrap project-cards">
+    <div class="col wide-span-4 med-span-6 project" *ngFor="let project of projects_service.projects">
+      <project-card [project]="project"></project-card>
+    </div>
+  </div>
+  <load-more></load-more>
+</section>

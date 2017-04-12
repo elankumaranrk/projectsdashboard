@@ -1,0 +1,4 @@
+<a href="#" (click)="toggleDropdown($event)" [ngClass]="{ active: dropdownActive }"> <span>{{title}}:</span> <span>{{selectedParam}}</span> <span class="down-dark"></span></a>
+<ul *ngIf="dropdownActive">
+  <li *ngFor="let param of sortParams"> <a href="#" (click)="sort($event, param)">{{param}}</a> </li>
+</ul>

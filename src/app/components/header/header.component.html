@@ -1,0 +1,15 @@
+<section class="projects-header hero short">
+  <div class="col-wrap">
+    <h2>{{heroTitle}}</h2>
+    <category-menu></category-menu>
+    <nav *ngIf="deeplink_service.currentPage != 'search'">
+      <p>View</p>
+      <div> <a class="explore-view" [ngClass]="{ active: deeplink_service.currentPage === 'explore' }" (click)="goToPage($event, 'explore')"
+          data-g-event="Projects_Header" data-g-action="Click" data-g-label="Nav Explore">          Explore        </a>
+        <a
+          class="list-view" [ngClass]="{ active: deeplink_service.currentPage === 'list' }" (click)="goToPage($event, 'list')"
+          data-g-event="Projects_Header" data-g-action="Click" data-g-label="Nav List"> List </a>
+      </div>
+    </nav>
+  </div>
+</section>
