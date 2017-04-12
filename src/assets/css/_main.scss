@@ -1,0 +1,9 @@
+@import '_config';
+
+.main {
+  background-color: #ffffff;
+  box-shadow: $shadow;
+  box-sizing: border-box;
+  margin: 0 auto;
+  min-height: 100vh;
+}

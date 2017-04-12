@@ -1,0 +1,457 @@
+@import '_config';
+
+.hero {
+  background-color: $color-dark-bg;
+  box-sizing: border-box;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  min-height: 338px;
+  justify-content: center;
+  margin: 0 auto;
+  padding: $padding;
+  position: relative;
+  text-align: left;
+
+  &:after {
+    background: url("/assets/static/images/home/hero-tall-mobile.png") 0 0 no-repeat;
+    background-size: 257px 393px;
+    content: '.';
+    font-size: 0;
+    height: 393px;
+    left: -$padding;
+    position: absolute;
+    top: 0;
+    width: 257px;
+  }
+
+  h2 {
+    color: #ffffff;
+    margin: 0 0 8px 0;
+  }
+
+  nav.hero-nav {
+    margin-bottom: 0;
+    white-space: nowrap;
+
+    ul li {
+      display: inline-block;
+      margin: 0 10px 0 0;
+
+      &.active {
+        border-bottom: solid 4px white;
+
+        a {
+          margin: 0;
+          opacity: 1;
+        }
+      }
+
+      h2 {
+        font-size: 28px;
+        margin-bottom: 0;
+      }
+
+      a {
+        color: #ffffff;
+        display: block;
+        font-family: $font-family-headings;
+        font-size: 28px;
+        opacity: 0.3;
+        text-decoration: none;
+        text-transform: none;
+      }
+    }
+  }
+
+  p {
+    color: #ffffff;
+    font-family: $font-family-headings;
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  &.medium {
+    background-size: cover;
+    height: 350px;
+    text-align: center;
+
+    &::after {
+      display: none;
+    }
+
+    h2 {
+      font-size: 44px;
+      line-height: 54px;
+      margin: 0 auto;
+      max-width: 850px;
+    }
+  }
+
+  &.short {
+    min-height: 195px;
+
+    &::after {
+      display: none;
+    }
+
+    .col {
+      display: flex;
+      flex-direction: column;
+      height: 195px;
+      justify-content: center;
+    }
+
+    h2,
+    h2 a {
+      font-size: 34px;
+      line-height: 44px;
+      margin-bottom: 15px;
+    }
+
+    p {
+      color: $color-off-white;
+      font-family: $font-family-body;
+      font-size: 16px;
+      line-height: 21px;
+      margin-bottom: 0;
+      max-width: 700px;
+    }
+  }
+
+  &.light {
+    background: #ededed;
+    background:    -moz-linear-gradient(left, #f7f7f7 0%, #ededed 100%);
+    background: -webkit-linear-gradient(left, #f7f7f7 0%,#ededed 100%);
+    background:         linear-gradient(to right, #f7f7f7 0%,#ededed 100%);
+    color: $color-text;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fcfcfc',endColorstr='#f7f7f7',GradientType=1);
+    overflow: hidden;
+
+    h2 {
+      color: $color-med-grey;
+    }
+  }
+}
+
+@media (min-width: $break-med) {
+  .hero {
+    nav.hero-nav {
+      ul li {
+        margin: 0 20px 0 0;
+      }
+    }
+  }
+}
+
+// Hero intro animation
+@media (min-width: $break-wide) {
+  .google-open-source {
+    .hero {
+      height: 600px;
+      opacity: 0;
+      transition: opacity 0.4s ease-in;
+
+      h2 {
+        opacity: 0;
+        transition: opacity 0.4s ease-in 0.4s;
+      }
+
+      h2,
+      p {
+        position: relative;
+      }
+
+      h2:before,
+      p:before,
+      p:after {
+        background: $color-dark-bg;
+        content: '|';
+        position: absolute;
+        width: 100%;
+        height: 100px;
+        right: 0;
+        text-indent: 99999px;
+        transition: width 0.5s ease-in;
+      }
+
+      h2:before {
+        transition-delay: 0.5s;
+        width: 87%;
+      }
+
+      p:before,
+      p:after {
+        height: 31px;
+        transition-duration: 0.5s;
+        transition-delay: 1s;
+      }
+
+      p:after {
+        transition-delay: 1.4s;
+      }
+
+      &:after {
+        display: none;
+      }
+    }
+  }
+
+
+  $speed-interval: 0.25s;
+  $delay-interval: 0.15s;
+
+  .line-graphic {
+    height: 600px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    .segment {
+      width: 0;
+      position: absolute;
+      transition: width $speed-interval ease-in;
+      transition-delay: 1s;
+    }
+
+    .hotspot {
+      height: 0;
+      opacity: 0;
+      transform: scale(1);
+      transition: all 0.5s ease-in;
+      transition-delay: 1 + $delay-interval * 12;
+      width: 0;
+    }
+    .hotspot:after {
+      pointer-events: none;
+    }
+  }
+
+  // after page load the "js" class triggers css animations
+  .js {
+    .hero,
+    .hero h2 {
+      opacity: 1;
+    }
+
+    .hero h2:before,
+    .hero p:before,
+    .hero p:after {
+      width: 0;
+    }
+
+    .line-graphic {
+      .blue-one {
+        background: url("/assets/static/images/home/hero/blue-1.png") 0 0 no-repeat;
+        background-size: 381px 33px;
+        width: 381px;
+        height: 33px;
+        top: 111px;
+        left: -15px;
+        transition-delay: 1 + $delay-interval * 6;
+        transition-duration: $speed-interval * 2;
+      }
+
+      .grey-one {
+        background: url("/assets/static/images/home/hero/grey-1.png") 0 0 no-repeat;
+        background-size: 232px 38px;
+        width: 232px;
+        height: 38px;
+        top: 79px;
+        left: 111px;
+        transition-delay: 1 + $delay-interval * 7;
+        transition-duration: $speed-interval * 1.5;
+      }
+
+      .grey-two {
+        background: url("/assets/static/images/home/hero/grey-2.png") 0 0 no-repeat;
+        background-size: 100px 18px;
+        width: 100px;
+        height: 18px;
+        top: 224px;
+        left: -15px;
+        transition-delay: 1 + $delay-interval * 2;
+      }
+
+      .yellow-one {
+        background: url("/assets/static/images/home/hero/yellow-1.png") 0 0 no-repeat;
+        background-size: 253px 21px;
+        width: 253px;
+        height: 21px;
+        top: 322px;
+        left: -15px;
+        transition-delay: 1 + $delay-interval * 3;
+      }
+
+      .grey-three {
+        background: url("/assets/static/images/home/hero/grey-3.png") 0 0 no-repeat;
+        background-size: 100px 101px;
+        width: 100px;
+        height: 101px;
+        top: 222px;
+        left: 78px;
+        transition-delay: 1 + $delay-interval * 4;
+      }
+
+      .red-one {
+        background: url("/assets/static/images/home/hero/red-1.png") 0 0 no-repeat;
+        background-size: 358px 49px;
+        width: 358px;
+        height: 49px;
+        top: 139px;
+        left: -15px;
+        transition-delay: 1 + $delay-interval * 6;
+        transition-duration: $speed-interval * 2;
+      }
+
+      .grey-four {
+        background: url("/assets/static/images/home/hero/grey-4.png") 0 0 no-repeat;
+        background-size: 143px 49px;
+        width: 143px;
+        height: 49px;
+        top: 340px;
+        left: 78px;
+        transition-delay: 1 + $delay-interval * 6;
+      }
+
+      .green-one {
+        background: url("/assets/static/images/home/hero/green-1.png") 0 0 no-repeat;
+        background-size: 251px 86px;
+        width: 251px;
+        height: 86px;
+        top: 387px;
+        left: 202px;
+        transition-delay: 1 + $delay-interval * 7;
+      }
+
+      .blue-two {
+        background: url("/assets/static/images/home/hero/blue-2.png") 0 0 no-repeat;
+        background-size: 323px 25px;
+        width: 323px;
+        height: 25px;
+        position: absolute;
+        top: 115px;
+        left: 371px;
+        transition-delay: 1 + $delay-interval * 10;
+      }
+
+      .grey-five {
+        background: url("/assets/static/images/home/hero/grey-5.png") 0 0 no-repeat;
+        background-size: 141px 53px;
+        width: 141px;
+        height: 53px;
+        top: 466px;
+        left: 282px;
+        transition-delay: 1 + $delay-interval * 9;
+      }
+
+      .grey-six {
+        background: url("/assets/static/images/home/hero/grey-6.png") 0 0 no-repeat;
+        background-size: 178px 118px;
+        width: 178px;
+        height: 118px;
+        top: 0;
+        left: 497px;
+        transition-delay: 1 + $delay-interval * 11;
+      }
+
+      .green-two {
+        background: url("/assets/static/images/home/hero/green-2.png") 0 0 no-repeat;
+        background-size: 276px 142px;
+        width: 276px;
+        height: 142px;
+        top: 515px;
+        left: 394px;
+        transition-delay: 1 + $delay-interval * 11;
+      }
+
+      .grey-seven {
+        background: url("/assets/static/images/home/hero/grey-7.png") 0 0 no-repeat;
+        background-size: 174px 93px;
+        width: 174px;
+        height: 93px;
+        margin-left: -174px;
+        top: 0;
+        left: 100%;
+        transition-delay: 1 + $delay-interval * 12;
+      }
+
+      .grey-eight {
+        background: url("/assets/static/images/home/hero/grey-8-interactive.png") 0 0 no-repeat;
+        background-size: 184px 17px;
+        width: 184px;
+        height: 17px;
+        top: 23px;
+        left: 681px;
+        transition-delay: 0s;
+      }
+
+      .yellow-two {
+        background: url("/assets/static/images/home/hero/yellow-2-interactive.png") 0 0 no-repeat;
+        background-size: 140px 25px;
+        width: 140px;
+        height: 25px;
+        top: 319px;
+        left: 244px;
+        transition-delay: 0s;
+      }
+
+      .hidden {
+        width: 0;
+      }
+
+      .hotspot {
+        height: 40px;
+        position: absolute;
+        top: 12px;
+        left: 645px;
+        opacity: 1;
+        transform: scale(1);
+        width: 40px;
+      }
+
+      .hotspot::after {
+        content: 'o';
+        display: block;
+        background: $color-grey;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        opacity: 0.4;
+        text-indent: 9999px;
+        animation: pulse 3.5s infinite;
+        animation-delay: 0.5s;
+      }
+
+      .hotspot.yellow {
+        top: 312px;
+        left: 210px;
+      }
+
+      .hotspot.yellow::after {
+        background: #fabb05;
+        animation-delay: 0s;
+      }
+    }
+  }
+
+  @keyframes pulse {
+    0% {
+      opacity: 0.3;
+      transform: scale(1);
+    }
+    20% {
+      opacity: 0.1;
+      transform: scale(0.3);
+    }
+    80% {
+      opacity: 0.1;
+      transform: scale(0.3);
+    }
+    100% {
+      opacity: 0.3;
+      transform: scale(1);
+    }
+  }
+}

@@ -1,0 +1,61 @@
+// For individual component styles see Angular app at:
+// source/projects/app/components/<component name>
+@import '_config';
+
+.projects {
+  .main .container {
+    opacity: 0;
+    transition: opacity 0.4s ease-in;
+  }
+
+  .explore-projects .selected-project img,
+  .explore-projects .selected-project svg {
+    margin-bottom: 15px;
+    width: 60px !important;
+  }
+
+  .projects-list .project .project-card {
+    margin: 0 0 $padding 0;
+  }
+
+  .project h3 {
+    font-size: 20px;
+    line-height: 22px;
+    margin: 0 0 15px 0;
+  }
+}
+
+.js {
+  .projects .explore-projects {
+    opacity: 1;
+  }
+  .projects .main .container {
+    opacity: 1;
+  }
+}
+
+
+@media (min-width: $break-med) {
+  .projects {
+    .projects-list .project .project-card {
+      margin: 0 $padding $padding 0;
+      min-height: 315px;
+    }
+
+    .projects-list .project:nth-child(2n) .project-card {
+      margin-right: 0;
+    }
+  }
+}
+
+@media (min-width: $break-wide) {
+  .projects {
+    .projects-list .project:nth-child(2n) .project-card {
+      margin-right: $padding;
+    }
+
+    .projects-list .project:nth-child(3n) .project-card {
+      margin-right: 0;
+    }
+  }
+}

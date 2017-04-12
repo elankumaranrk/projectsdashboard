@@ -20,7 +20,7 @@
   position: relative;
 }
 
-:host .project-card .card-header>div {
+:host .project-card .card-header > div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -74,8 +74,7 @@
   justify-content: center;
 }
 
-:host .project-card .card-header .logo img,
-:host .project-card .card-header .logo svg {
+:host .project-card .card-header .logo img, :host .project-card .card-header .logo svg {
   display: block;
   margin: 0 auto;
   -o-object-fit: contain;
@@ -83,8 +82,7 @@
   width: 50%;
 }
 
-:host .project-card:hover .card-header .logo,
-:host .project-card:hover .card-header .logo {
+:host .project-card:hover .card-header .logo, :host .project-card:hover .card-header .logo {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }

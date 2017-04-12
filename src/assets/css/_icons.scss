@@ -1,0 +1,50 @@
+@import '_config';
+
+body {
+  .search {
+    background: url($magnifying_glass) 0 5px no-repeat;
+    background-size: 18px 18px;
+  }
+
+  .down-dark,
+  .down-light {
+    display: block;
+    height: 30px;
+    width: 30px;
+  }
+
+  .down-light {
+    background: url($caret) 9px 13px no-repeat;
+    background-size: 12px 6px;
+  }
+
+  .down-dark {
+    background: url($caret_dark) 9px 13px no-repeat;
+    background-size: 12px 6px;
+  }
+
+  .close {
+    background: url($icon_close) 0 0 no-repeat;
+  }
+
+  .chevron-down-blue {
+    background: url($chevron_blue) 0 0 no-repeat;
+  }
+
+  .list-view,
+  .explore-view {
+    background-size: 24px 24px;
+    display: block;
+    height: 24px;
+    text-indent: -9999px;
+    width: 24px;
+  }
+
+  .list-view {
+    background: url($icon_list) 0 0 no-repeat;
+  }
+
+  .explore-view {
+    background: url($icon_explore) 0 0 no-repeat;
+  }
+}

@@ -1,0 +1,553 @@
+@import '_config';
+
+.google-open-source {
+  text-align: center;
+
+  section {
+    padding: 70px $padding $padding $padding;
+
+    p {
+      font-size: 16px;
+      margin: 0 auto $padding * 2 auto;
+    }
+
+    &.hero {
+      padding: $padding;
+      text-align: left;
+
+      h2 {
+        font-size: 34px;
+        line-height: 40px;
+        margin-bottom: 20px;
+
+        &.logo {
+          background: url($logo_white) 0 0 no-repeat;
+          background-size: 290px 36px;
+          display: block;
+          font-size: 0;
+          height: 36px;
+          text-indent: -9999px;
+          width: 290px;
+        }
+      }
+
+      p {
+        font-size: 18px;
+        line-height: 24px;
+        margin: 0;
+        max-width: 240px;
+      }
+    }
+  }
+
+  .benefits {
+    .heading {
+      text-align: left;
+    }
+
+    h3 {
+      margin-top: 40px;
+    }
+
+    .benefit {
+      h4 {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+
+      p {
+        max-width: 260px;
+      }
+    }
+
+    .col {
+      margin: 20px 0 0 0;
+    }
+
+    .icon {
+      height: 65px;
+      margin: 0 auto 10px auto;
+      position: relative;
+      width: 75px;
+
+      &.use {
+        overflow: hidden;
+        transition: width 0.1s ease-in;
+      }
+
+      &.use:hover,
+      &.use.animate {
+        width: 100px;
+
+        .icon-inner {
+          animation: cycle-use-icons 0.75s 1;
+        }
+      }
+
+      &.use:before,
+      &.use:after {
+        background: url($curly_left) 0 0 no-repeat;
+        background-size: 29px 65px;
+        content: '{';
+        display: block;
+        height: 65px;
+        position: absolute;
+        text-indent: -9999px;
+        width: 29px;
+      }
+
+      &.use:after {
+        background: url($curly_right) 0 0 no-repeat;
+        right: 0;
+      }
+
+      &.use .icon-inner {
+        background: url($middle_icons) 0 0 no-repeat;
+        height: 260px;
+        left: 50%;
+        margin: 0 0 0 -22px;
+        opacity: 0;
+        position: absolute;
+        width: 44px;
+      }
+
+      &.release {
+        height: 65px;
+        width: 65px;
+
+        .icon-inner {
+          height: 65px;
+          width: 65px;
+        }
+      }
+
+      &.release:before,
+      &.release:after,
+      &.release .icon-inner:before,
+      &.release .icon-inner:after {
+        background: url($diagonal_arrow) 0 0 no-repeat;
+        background-size: 30px 30px;
+        content: '>';
+        height: 30px;
+        left: 0;
+        overflow: hidden;
+        position: absolute;
+        text-indent: 9999px;
+        top: 0;
+        transition: all 0.15s ease-in-out;
+        width: 30px;
+      }
+
+
+      &.release:after {
+        left: 35px;
+        transform: rotate(90deg);
+      }
+
+      &.release .icon-inner:after {
+        top: 35px;
+        transform: rotate(-90deg);
+      }
+
+      &.release .icon-inner:before {
+        left: 35px;
+        top: 35px;
+        transform: rotate(180deg);
+      }
+
+      &.release:hover,
+      &.release.animate {
+        &:before {
+          left: -10px;
+          top: -10px;
+        }
+
+        &:after {
+          left: 45px;
+          top: -10px;
+          transition-delay: 0.05s;
+        }
+
+        .icon-inner:after {
+          left: -10px;
+          top: 45px;
+          transition-delay: 0.1s;
+        }
+
+        .icon-inner:before {
+          left: 45px;
+          top: 45px;
+          transition-delay: 0.15s;
+        }
+      }
+
+      &.support {
+        width: 86px;
+      }
+
+      &.support:before,
+      &.support:after,
+      &.support .icon-inner-one:before,
+      &.support .icon-inner-one:after,
+      &.support .icon-inner-two:before,
+      &.support .icon-inner-two:after {
+        background: url($green-box) 0 0 no-repeat;
+        background-size: 32px 25px;
+        content: '[]';
+        height: 25px;
+        opacity: 1;
+        position: absolute;
+        text-indent: -9999px;
+        transition: opacity 0.3s ease-out;
+        width: 32px;
+      }
+
+      &.support:hover,
+      &.support.animate {
+        &:before,
+        &:after,
+        & .icon-inner-one:before,
+        & .icon-inner-one:after,
+        & .icon-inner-two:before,
+        & .icon-inner-two:after {
+          animation: fall-from-top 0.3s 1;
+          opacity: 0;
+
+          animation-fill-mode: forwards;
+        }
+
+        &:before {
+          animation-delay: 0.3s;
+        }
+        &:after {
+          animation-delay: 0.3s * 1.5;
+        }
+        & .icon-inner-one:before {
+          animation-delay: 0.3s * 2;
+        }
+        & .icon-inner-one:after {
+          animation-delay: 0.3s * 2.5;
+        }
+        & .icon-inner-two:before {
+          animation-delay: 0.3s * 3;
+        }
+        & .icon-inner-two:after {
+          animation-delay: 0.3s * 3.5;
+        }
+      }
+
+      &.support:before {
+        bottom: 0;
+        left: 0;
+      }
+      &.support:after {
+        bottom: 0;
+        left: 27px;
+      }
+      &.support .icon-inner-one:before {
+        bottom: 0;
+        left: 54px;
+      }
+      &.support .icon-inner-one:after {
+        bottom: 20px;
+        left: 13px;
+      }
+      &.support .icon-inner-two:before {
+        bottom: 20px;
+        left: 40px;
+      }
+      &.support .icon-inner-two:after {
+        left: 27px;
+      }
+    }
+
+    @keyframes fade-out-and-in {
+      0% {
+        opacity: 1;
+      }
+      30% {
+        opacity: 0;
+      }
+      31% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fall-from-top {
+      0% {
+        opacity: 0;
+        transform: translateY(-100px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes cycle-use-icons {
+      0% {
+        background-position: 0 0;
+        opacity: 0;
+      }
+      20% {
+        background-position: 0 0;
+        opacity: 1;
+      }
+      21% {
+        background-position: 0 -65px;
+      }
+      40% {
+        background-position: 0 -65px;
+      }
+      41% {
+        background-position: 0 -130px;
+      }
+      60% {
+        background-position: 0 -130px;
+      }
+      61% {
+        background-position: 0 -195px;
+      }
+      79% {
+        background-position: 0 -195px;
+      }
+      80% {
+        background-position: 0 -195px;
+        opacity: 1;
+      }
+      100% {
+        background-position: 0 -195px;
+        opacity: 0;
+      }
+    }
+  }
+
+  .callout {
+    background-color: $color-bg;
+    padding: 70px $padding;
+    text-align: left;
+  }
+
+  .project-count {
+    background-image: url("/assets/static/images/home/project/bg_sm_top.png"), url("/assets/static/images/home/project/bg_sm_btm.png");
+    background-position: top left, bottom right;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 92px 60px, 187px 126px;
+    margin-top: 40px;
+  }
+
+  .quotes {
+    padding: 0;
+    text-align: left;
+
+    .quote {
+      border-bottom: solid 4px $color-bg;
+      padding: $padding * 2 $padding;
+    }
+
+    h4 {
+      color: $color-blue;
+      font-size: 24px;
+      line-height: 32px;
+      margin-bottom: $padding;
+    }
+
+    p {
+      line-height: 40px;
+      margin: 0;
+
+      img {
+        border-radius: 50%;
+        float: left;
+        height: 40px;
+        margin: 0 $padding 0 0;
+        width: 40px;
+      }
+    }
+
+    .med-span-5 {
+      h4 {
+        color: $color-green;
+      }
+    }
+  }
+
+  .community-how {
+    background-image: url("/assets/static/images/home/community_how/bg_sm_top.png"), url("/assets/static/images/home/community_how/bg_sm_btm.png");
+    background-position: top right, bottom right;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 215px 113px, 174px 131px;
+    padding-bottom: 0;
+
+    .col {
+      margin-bottom: 70px;
+    }
+  }
+
+  .blog-list {
+    padding: 80px $padding;
+    text-align: left;
+  }
+}
+
+@media (min-width: $break-med) {
+  .google-open-source {
+    section {
+      p {
+        max-width: 642px;
+      }
+    }
+
+    section.hero {
+      text-align: right;
+
+      h2 {
+        font-size: 46px;
+        line-height: 52px;
+
+        &.logo {
+          background-size: 582px 72px;
+          float: right;
+          font-size: 0;
+          height: 72px;
+          width: 582px;
+        }
+      }
+
+      p {
+        float: right;
+        font-size: 24px;
+        line-height: 32px;
+        max-width: 480px;
+      }
+    }
+
+    .benefits .heading {
+      text-align: center;
+    }
+
+    .callout {
+      text-align: center;
+    }
+
+    .quotes {
+      padding: 0 $padding;
+      position: relative;
+
+      .quote {
+        background: white;
+        border-bottom: none;
+        border-right: solid 4px $color-bg;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0;
+        min-height: 352px;
+        padding: $padding;
+        position: relative;
+        z-index: 1;
+
+        justify-content: center;
+      }
+
+      h4 {
+        font-size: 34px;
+        line-height: 44px;
+      }
+
+      .med-span-5 {
+        border-left: solid 4px $color-bg;
+        border-right: none;
+        margin-left: -4px;
+        min-height: 176px;
+        padding: $padding;
+        position: static;
+
+        h4 {
+          font-size: 24px;
+          line-height: 32px;
+        }
+      }
+
+      &:before {
+        background: $color-bg;
+        content: '-';
+        height: 4px;
+        left: 50%;
+        margin-top: -2px;
+        position: absolute;
+        top: 50%;
+        width: 100%;
+
+        @include hide-text();
+      }
+    }
+
+    .community-how {
+      h4,
+      p {
+        margin: 0 auto 33px auto;
+        max-width: 315px;
+      }
+
+      h4 {
+        margin-bottom: 10px;
+        min-height: 98px;
+      }
+
+      p {
+        margin-bottom: 30px;
+        min-height: 111px;
+      }
+    }
+
+    .blog-list {
+      text-align: center;
+    }
+  }
+}
+
+@media (min-width: $break-wide) {
+  .google-open-source {
+    section.hero h2 {
+      font-size: 52px;
+      line-height: 58px;
+    }
+
+    .project-count {
+      background-color: $color-bg;
+      background-image: url("/assets/static/images/home/project/bg_left.png"), url("/assets/static/images/home/project/bg_right.png");
+      background-position: top left, top right;
+      background-repeat: no-repeat, no-repeat;
+      background-size: 331px 400px, 331px 372px;
+    }
+
+    .quotes {
+      .quote {
+        padding: $padding $padding * 3 $padding $padding;
+      }
+
+      .med-span-5 {
+        padding: $padding $padding $padding $padding * 3;
+      }
+    }
+
+    .community-how {
+      background-image: url("/assets/static/images/home/community_how/bg_left.png"), url("/assets/static/images/home/community_how/bg_right.png");
+      background-position: top left, top right;
+      background-size: 233px 400px, 432px 361px;
+
+      h4,
+      p {
+        max-width: 415px;
+      }
+
+      h4 {
+        margin-bottom: 33px;
+        min-height: 0;
+      }
+    }
+  }
+}

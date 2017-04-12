@@ -1,0 +1,31 @@
+@import '_config';
+
+.loader {
+  animation: rotate 1s infinite backwards;
+  background: url("/assets/static/images/loader.png") 0 0 no-repeat;
+  background-size: 48px 48px;
+  height: 48px;
+  left: 50%;
+  margin: -24px 0 0 -24px;
+  opacity: 1;
+  position: fixed;
+  text-indent: -99999px;
+  top: 50%;
+  transform: scale(1);
+  transition: all 0.3s ease-in;
+  width: 48px;
+  z-index: 1;
+}
+
+.js .loader {
+  display: none;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

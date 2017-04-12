@@ -1,0 +1,76 @@
+@import '_config';
+
+.footer-main {
+  background: $color-dark-bg;
+  box-sizing: border-box;
+  color: #ffffff;
+  padding: 24px $padding;
+  position: relative;
+  z-index: 98;
+
+  .col-wrap {
+    max-width: none;
+  }
+
+  nav {
+    li {
+      display: inline-block;
+      line-height: 25px;
+      margin: 0 15px 0 0;
+    }
+
+    &.pull-right {
+      clear: both;
+      float: none;
+      padding-top: $padding;
+    }
+  }
+
+  a {
+    color: $color-grey;
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover {
+      color: white;
+    }
+  }
+
+  .google {
+    display: block;
+    margin-bottom: $padding;
+
+    a {
+      background: url($google_logo) 0 0 no-repeat;
+      display: inline-block;
+      height: 26px;
+      opacity: 0.54;
+      text-indent: -9999px;
+      width: 80px;
+    }
+  }
+
+  @media (min-width: $break-med) {
+    nav {
+      &.pull-right {
+        clear: none;
+        float: right;
+        padding: 0;
+
+        li {
+          margin: 0 0 0 30px;
+        }
+      }
+
+      .google {
+        display: inline-block;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @media (min-width: $break-wide) {
+    padding: 24px;
+  }
+}

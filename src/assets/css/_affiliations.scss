@@ -1,0 +1,323 @@
+@import '_config';
+
+.affiliations {
+  .header-main {
+    z-index: 99;
+  }
+
+  .container {
+    .hero {
+      z-index: 98;
+    }
+
+    .affiliations-list {
+      overflow: hidden;
+      padding: $padding $padding 70px $padding;
+      position: relative;
+
+      .alpha-list {
+        float: left;
+        width: 92%;
+      }
+
+      #AlphaMenu {
+        height: 100%;
+        height: 100vh;
+        min-width: 60px;
+        opacity: 0;
+        padding: 2% 0;
+        pointer-events: none;
+        position: fixed;
+        right: 0;
+        text-indent: 25px;
+        top: 0;
+        width: 10%;
+        z-index: 97;
+
+        &.active {
+          opacity: 1;
+        }
+
+        // hack for touch scroll position: fixed
+        &::after {
+          content: '|';
+          display: block;
+          height: 0;
+          position: absolute;
+          right: 0;
+          text-indent: -9999px;
+          width: 40;
+        }
+
+        ul {
+          height: 96%;
+          margin: 0;
+          pointer-events: none;
+
+          li {
+            // 27 items in the list
+            height: 3.7037037037037037%;
+            line-height: 3.7037037037037037%;
+            pointer-events: none;
+            text-align: center;
+          }
+
+          a {
+            color: $color-light-grey;
+            display: block;
+            font-size: 14px;
+            height: 100%;
+            line-height: normal;
+            pointer-events: all;
+          }
+        }
+      }
+
+      #Debugger {
+        background: pink;
+        color: white;
+        left: 0;
+        position: fixed;
+        top: 0;
+      }
+
+      #AlphaIndicator {
+        margin-top: -10px;
+        opacity: 0;
+        pointer-events: none;
+        position: absolute;
+        right: 0;
+        text-align: center;
+        top: 44px;
+        transition: all 0.2s cubic-bezier(0.165, 0.840, 0.440, 1.000);
+        width: 60px;
+        z-index: 99;
+
+        .current-alpha {
+          background: $color-blue;
+          border-radius: 50%;
+          color: white;
+          font-family: $font-family-headings;
+          font-size: 24px;
+          height: 40px;
+          line-height: 39px;
+          pointer-events: none;
+          position: relative;
+          text-align: center;
+          text-indent: 0;
+          transition: all 0.2s cubic-bezier(0.165, 0.840, 0.440, 1.000);
+          width: 40px;
+        }
+
+        &.active {
+          opacity: 1;
+        }
+
+        &::before {
+          background: white;
+          content: '-';
+          height: 20px;
+          left: 35px;
+          pointer-events: none;
+          position: absolute;
+          text-indent: -9999px;
+          top: 10px;
+          width: 20px;
+        }
+
+        &::after {
+          background: $color-blue;
+          content: '|';
+          display: block;
+          height: 55px;
+          pointer-events: none;
+          position: absolute;
+          right: 0;
+          text-indent: -9999px;
+          top: -7px;
+          width: 4px;
+        }
+
+        &.trackfinger {
+          transition: none;
+
+          .current-alpha {
+            font-size: 40px;
+            height: 65px;
+            line-height: 60px;
+            margin: -13px 0 0 -50px;
+            transition: none;
+            width: 65px;
+          }
+        }
+      }
+
+      .alpha-set {
+        margin-top: 5px;
+      }
+
+      .alpha-set:last-child {
+        height: 100%;
+        height: 100vh;
+      }
+
+      .alpha-set:last-child.active {
+        height: auto;
+      }
+
+      .alpha-label {
+        h2 {
+          color: $color-light-grey;
+          font-size: 17px;
+          font-weight: bold;
+          margin: 0;
+          position: relative;
+          z-index: 1;
+        }
+      }
+
+      .affiliations-group {
+        border-top: solid 3px $color-bg;
+        margin-top: -23px;
+        position: relative;
+
+        &:before,
+        &:after {
+          background: white;
+          border: solid 3px $color-bg;
+          border-radius: 50%;
+          content: 'o';
+          height: 5px;
+          margin: -7px 0 0 0;
+          position: absolute;
+          right: 0;
+          text-indent: -9999px;
+          top: 0;
+          width: 5px;
+        }
+
+        &:before {
+          border: none;
+          border-radius: 0;
+          height: 10px;
+          left: 0;
+          right: auto;
+          width: 20px;
+        }
+
+
+        ul li {
+          margin-top: 35px;
+
+          img {
+            float: left;
+            height: 61px;
+            margin: 0 20px 20px 0;
+            width: 61px;
+          }
+
+          h4 {
+            font-size: 24px;
+            margin: 0 0 20px 0;
+          }
+
+          p {
+            clear: both;
+            margin: 0 0 20px 0;
+          }
+
+          a {
+            display: inline-block;
+            margin: 0 0 20px 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $break-med) {
+  .affiliations {
+    .container {
+      .affiliations-list {
+        .alpha-list {
+          float: none;
+          width: auto;
+        }
+
+        #AlphaMenu,
+        #AlphaIndicator {
+          display: none;
+        }
+
+        .alpha-set {
+          display: none;
+
+          &.active {
+            display: block;
+          }
+        }
+
+        .alpha-label {
+          margin: $padding * 3 0 0 0;
+
+          h2 {
+            font-size: 44px;
+            font-weight: normal;
+            margin: 0 20px $padding $padding;
+            text-align: right;
+          }
+        }
+
+        .affiliations-group {
+          border-left: solid 4px $color-bg;
+          border-top: none;
+          margin: $padding * 2 0 0 0;
+          padding: 0 0 0 $padding * 2;
+
+          &:before,
+          &:after {
+            background: white;
+            border: solid 4px $color-bg;
+            border-radius: 50%;
+            content: 'o';
+            height: 9px;
+            left: 0;
+            margin: 0 0 -11px -11px;
+            position: absolute;
+            text-indent: -9999px;
+            top: 0;
+            width: 9px;
+          }
+
+          &:after {
+            bottom: 0;
+            left: 0;
+            margin: -11px 0 0 -11px;
+            right: auto;
+            top: auto;
+          }
+
+          ul li:first-child {
+            margin-top: 20px;
+          }
+
+          ul li {
+            h4 {
+              line-height: 61px;
+            }
+            img {
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $break-wide) {
+  .affiliations {
+    .container {
+    }
+  }
+}

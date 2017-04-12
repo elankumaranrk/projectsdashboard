@@ -1,0 +1,130 @@
+@import '_config';
+
+.community {
+  .container {
+    .program-list {
+      padding: 95px $padding 0 $padding;
+
+      .program {
+        padding-bottom: 95px;
+      }
+
+      .image-wrap {
+        position: relative;
+      }
+
+      img {
+        background: white;
+        border: solid 4px $color-bg;
+        border-radius: 50%;
+        box-sizing: border-box;
+        display: block;
+        margin: 0 auto $padding * 2 auto;
+        max-width: 375px;
+        padding: 10px;
+        position: relative;
+        width: 100%;
+        z-index: 2;
+
+        &.logo {
+          left: 50%;
+          margin: -45px 0 0 -59px;
+          padding: 20px;
+          position: absolute;
+          top: 0;
+          width: 115px;
+        }
+      }
+
+      .summary {
+        h4,
+        p {
+          margin-bottom: $padding;
+        }
+
+        blockquote {
+          font-family: $font-family-headings;
+          font-size: 18px;
+          line-height: 26px;
+          margin: 0 0 $padding 0;
+        }
+
+        cite {
+          color: $color-med-grey;
+          display: block;
+          font-style: normal;
+          margin: 0 0 $padding 0;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $break-med) {
+  .community {
+    .hero:before {
+      background: url("/assets/static/images/community/hero/bg_right.png") 123px 0 no-repeat;
+      background-size: 635px 130px;
+      content: '.';
+      display: block;
+      height: 130px;
+      position: absolute;
+      right: 0;
+      text-indent: -99999px;
+      top: 0;
+      width: 635px;
+    }
+
+    .container {
+      .program-list {
+        .image-wrap:before {
+          background: $color-bg;
+          content: '|';
+          height: 220px;
+          left: 50%;
+          margin: 0 0 0 -2px;
+          position: absolute;
+          text-indent: -9999px;
+          top: 285px;
+          width: 4px;
+          z-index: 1;
+        }
+
+        img {
+          max-width: 412px;
+        }
+
+        .summary {
+          display: flex;
+          flex-direction: column;
+          height: 338px;
+          padding: 0 0 0 $padding * 3;
+
+          justify-content: center;
+        }
+
+        .program:last-child {
+          .image-wrap:before {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $break-wide) {
+  .community {
+    .hero:before {
+      background-position: 0 0;
+    }
+
+    .container {
+      .program-list {
+        .summary {
+          padding: 0 0 0 $padding * 5;
+        }
+      }
+    }
+  }
+}

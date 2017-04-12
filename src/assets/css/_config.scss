@@ -1,0 +1,33 @@
+// Colors
+$color-bg: #f2f2f2;
+$color-dark-bg: #474747;
+$color-text: #444444;
+$color-off-white: #fefefe;
+$color-grey: #cccccc;
+// $color-med-grey: #8a8a8a;
+$color-med-grey: #4c4c4c;
+$color-light-grey: #e0e0e0;
+$color-blue: #4285f4;
+$color-green: #34a852;
+
+// Dimensions
+$padding: 15px;
+$contained-width: 988px;
+$break-wide: 940px;
+$break-med: 720px;
+$header-height: 75px;
+
+// Type
+$font-family-body: 'Roboto', sans-serif;
+$font-family-headings: 'Roboto Slab', serif;
+$line-height: 18px;
+
+// Effects
+$shadow: 0 1px 1.5px rgba(0,0,0,0.12),0 1px 1px rgba(0,0,0,0.24);
+
+// Utils
+@mixin hide-text {
+  display: block;
+  overflow: hidden;
+  text-indent: -9999px;
+}

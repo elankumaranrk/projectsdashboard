@@ -1,0 +1,426 @@
+@import '_config';
+
+.docs {
+  .hero:before {
+    background: url("/assets/static/images/docs/hero/bg_right_mobile.png") 0 0 no-repeat;
+    background-size: 174px 60px;
+    content: '.';
+    display: block;
+    height: 60px;
+    position: absolute;
+    right: 0;
+    text-indent: -99999px;
+    top: 0;
+    width: 174px;
+  }
+
+  #DocsNavToggle {
+    border-bottom: solid 4px $color-bg;
+    color: $color-text;
+    display: block;
+    padding: 22px $padding;
+
+    &:after {
+      background: url($caret_dark) 0 0 no-repeat;
+      background-size: 10px 5px;
+      content: ">";
+      float: right;
+      height: 5px;
+      margin: 10px 0 0 0;
+      text-indent: -9999px;
+      width: 10px;
+    }
+
+    &.active {
+      border-bottom: none;
+      font-size: 18px;
+
+      &:after {
+        background: url($icon_close) 0 0 no-repeat;
+        background-size: 18px 18px;
+        height: 18px;
+        margin: 0;
+        width: 18px;
+      }
+    }
+  }
+
+  .nav-docs {
+    nav {
+      background: white;
+    }
+
+    #DocsNav ul {
+      display: none;
+    }
+
+    #DocsNav.active {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+
+      ul {
+        display: block;
+      }
+    }
+
+    ul li {
+      a {
+        background: $color-bg;
+        border-top: solid 1px white;
+        color: $color-med-grey;
+        display: block;
+        font-size: 14px;
+        padding: 22px $padding;
+
+        span {
+          background: url($chevron_dark) 20px 25px no-repeat;
+          background-size: 12px 12px;
+          display: block;
+          float: right;
+          height: 62px;
+          margin: -22px -15px 0 0;
+          overflow: hidden;
+          text-indent: -9999px;
+          width: 50px;
+
+          &.active {
+            transform: rotate(180deg);
+          }
+        }
+
+        &.active {
+          color: $color-text;
+        }
+      }
+
+      ul li {
+        a {
+          padding-left: $padding * 2;
+        }
+
+        ul li {
+          &:first-child a:after {
+            display: none;
+          }
+
+          a {
+            border: none;
+            padding: $padding $padding $padding $padding * 3;
+            text-transform: none;
+          }
+
+          ul li {
+            a {
+              padding: $padding $padding $padding $padding * 4;
+            }
+          }
+        }
+      }
+
+      &.sub-nav {
+        display: none;
+
+        &.active {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .details-docs {
+    padding: 50px $padding;
+
+    h1 {
+      font-size: 32px;
+      line-height: 40px;
+      margin-bottom: 20px;
+      padding-top: 14px;
+    }
+
+    h2 {
+      font-size: 28px;
+      line-height: 36px;
+      margin-bottom: 20px;
+      padding-top: 14px;
+    }
+
+    h3,
+    h4,
+    h5 {
+      font-size: 24px;
+      line-height: 32px;
+      margin-bottom: 20px;
+      padding-top: 14px;
+    }
+
+    p {
+      margin: 0 0 26px 0;
+    }
+
+    a {
+      font-size: inherit;
+    }
+
+    ol {
+      li {
+        color: $color-med-grey;
+        font-size: 17px;
+        line-height: 24px;
+      }
+    }
+
+    p + ul {
+      margin-top: -16px;
+    }
+
+    p + ul ul {
+      margin-top: 0;
+    }
+
+    ul {
+      list-style: circle;
+      margin-bottom: 20px;
+      padding: 0 0 0 40px;
+
+      li {
+        color: $color-med-grey;
+        font-size: 17px;
+        line-height: 24px;
+        padding-bottom: 4px;
+      }
+
+      li p,
+      ul {
+        margin-bottom: 0;
+      }
+    }
+
+    nav > ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    pre {
+      overflow-x: scroll;
+      padding: 0 0 20px 0;
+    }
+
+    table {
+      line-height: 32px;
+      margin-bottom: 33px;
+      width: 100%;
+    }
+    table th {
+      text-align: left;
+    }
+
+    .license {
+      font-size: 14px;
+      a {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .doc-bar {
+    background: rgba(251, 188, 5, 0.25); // fbbc05
+    font-size: 14px;
+    margin: -2em auto 0 auto;
+    padding: 0.3em 0.5em;
+    text-align: center;
+  }
+
+  // highlight fragmentions and targeted anchors
+  [fragmention] {
+    position: relative;
+    z-index: 0;
+
+    // add background highlighting to :before psuedo element so that it can
+    // extend beyond the parent's box without messing with margins and padding
+    &:before {
+      animation: fragmention 3.5s both;
+      background: rgba(251, 188, 5, 0.5);
+      content: " ";
+      height: calc(100% + .6em);
+      left: -.3em;
+      position: absolute;
+      top: -.3em;
+      width: calc(100% + .6em);
+      z-index: -1;
+    }
+  }
+  @keyframes fragmention {
+    to {
+      background: rgba(251, 188, 5, 0.25);
+    }
+  }
+}
+
+@media (min-width: $break-med) {
+  .docs {
+    background: $color-bg;
+
+    .hero:before {
+      background: url("/assets/static/images/docs/hero/bg_right.png") 0 0 no-repeat;
+      background-size: 510px 215px;
+      height: 215px;
+      width: 510px;
+    }
+
+    .container-docs {
+      background: url($docs_bg_tile) 10% 0 repeat-y;
+    }
+
+    #DocsNavToggle {
+      display: none;
+    }
+
+    .nav-docs {
+      background: $color-bg;
+      padding-bottom: 50px;
+
+      nav {
+        background: none;
+      }
+
+      #DocsNav.active {
+        position: static;
+        width: auto;
+      }
+
+      #DocsNav {
+        padding: 50px 0 0 $padding;
+
+        ul {
+          display: block;
+          position: static;
+        }
+      }
+
+      ul {
+        display: block;
+        margin-left: 0;
+
+        li {
+          border-left: solid 4px white;
+          margin-left: $padding;
+
+          &:first-child {
+            margin-left: 0;
+          }
+
+          a {
+            background: none;
+            border: none;
+            padding: 10px $padding;
+            position: relative;
+
+            &:hover {
+              color: $color-dark-bg;
+            }
+
+            span {
+              display: none;
+            }
+
+            &:before {
+              background: $color-bg;
+              border: solid 4px white;
+              border-radius: 50%;
+              content: 'o';
+              height: 9px;
+              left: 0;
+              margin: 0 0 0 -11px;
+              position: absolute;
+              text-indent: -9999px;
+              width: 9px;
+            }
+
+            &.active {
+              color: $color-blue;
+
+              &:before {
+                border-color: $color-blue;
+              }
+            }
+          }
+
+          &.parent {
+            position: relative;
+
+            &:first-child {
+              border-color: $color-bg;
+            }
+
+            &:before {
+              background: $color-bg;
+              content: "[]";
+              height: 20px;
+              left: -4px;
+              position: absolute;
+              text-indent: -9999px;
+              top: 0;
+              width: 4px;
+            }
+          }
+
+          &.sub-nav {
+            display: block;
+            margin-bottom: $padding;
+            position: relative;
+
+            a {
+              padding-left: 20px;
+              text-transform: none;
+            }
+
+            ul {
+              border: none;
+              margin-bottom: 0;
+
+              &:before {
+                display: none;
+              }
+
+              li {
+                border: none;
+                margin-left: 0;
+
+                a {
+                  padding: 10px 10px 10px 40px;
+
+                  &:before {
+                    display: none;
+                  }
+
+                  &.active {
+                    &:before {
+                      display: block;
+                    }
+                  }
+                }
+
+                ul li {
+                  margin-left: 0;
+
+                  a {
+                    font-weight: 200;
+                    padding: 10px 10px 10px 60px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .details-docs {
+      background: white;
+      min-height: 1325px;
+      padding: 50px $padding 50px 50px;
+    }
+  }
+}
