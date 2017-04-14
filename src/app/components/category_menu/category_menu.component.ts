@@ -14,7 +14,7 @@ export class CategoryMenuComponent {
 
   inputVal: string;
   typingTimer: any;
-  defaultCategorySlug: string = 'featured';
+  defaultCategorySlug: string = 'production';
   query: string;
 
   constructor(

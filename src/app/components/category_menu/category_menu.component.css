@@ -10,7 +10,7 @@
 }
 
 :host>div.active span {
-  background-color: #585858;
+  background-color: #365A83;
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
@@ -34,7 +34,7 @@
 }
 
 :host form span {
-  background-color: #474747;
+  background-color: #365A83;
   cursor: pointer;
   height: 30px;
   position: absolute;
@@ -46,7 +46,7 @@
 }
 
 :host ul {
-  background: #585858;
+  background: #365A83;
   left: 0;
   margin: 0 -20px;
   padding: 51px 20px 10px 20px;
@@ -76,4 +76,9 @@
    :host form input {
     font-size: 20px;
   }
+}
+
+:host ::placeholder {
+  color: #eee;
+  opacity: 0.8;
 }

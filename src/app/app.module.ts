@@ -32,11 +32,11 @@ const LOCATION_STRATEGY = (ENVIRONMENT === 'dev') ?
   HashLocationStrategy :
   PathLocationStrategy;
 let urlPath = ENVIRONMENT === 'dev' ?
-  '/explore/featured' :
+  '/explore/production' :
   window['location'].hash.replace('#', '');
 
 if (ENVIRONMENT === 'prod' && urlPath === '') {
-  urlPath = '/explore/featured';
+  urlPath = '/explore/production';
 }
 
 const appRoutes:Routes = [

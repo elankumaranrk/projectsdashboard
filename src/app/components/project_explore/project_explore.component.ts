@@ -59,14 +59,14 @@ export class ProjectExploreComponent {
     if (window.innerWidth < this.config_service.MOBILE_WIDTH) {
       this.projects_service.requestParams.page_size =
         this.config_service.LIST_PAGE_SIZE;
-      this.router.navigate(['/list', 'featured']);
+      this.router.navigate(['/list', 'production']);
     } else {
       window.addEventListener('resize', () => {
         if (window.innerWidth < this.config_service.MOBILE_WIDTH &&
             this.router.url.indexOf('explore') > 0) {
           this.projects_service.requestParams.page_size =
             this.config_service.LIST_PAGE_SIZE;
-          this.router.navigate(['/list', 'featured']);
+          this.router.navigate(['/list', 'production']);
         }
       });
     }

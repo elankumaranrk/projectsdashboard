@@ -52,96 +52,44 @@ export class ConfigService {
 
   public CATEGORIES: Array<Object> = [
     {
-      slug: 'featured',
-      cat: 'Featured'
+      slug: 'production',
+      cat: 'Production'
     },
     // {
     //   slug: 'accessibility',
     //   cat: 'Accessibility'
     // },
     {
-      slug: 'cloud',
-      cat: 'Cloud'
+      slug: 'cbo',
+      cat: 'CBO'
     },
     {
-      slug: 'analytics-visualization',
-      cat: 'Data Analytics & Visualization'
+      slug: 'qa1',
+      cat: 'Test - QA1'
     },
     {
-      slug: 'databases',
-      cat: 'Databases'
+      slug: 'qa2',
+      cat: 'Test - QA2'
     },
     {
-      slug: 'developer-tools',
-      cat: 'Developer Tools'
+      slug: 'qa3',
+      cat: 'Test - QA3'
     },
     {
-      slug: 'education',
-      cat: 'Education & Science'
+      slug: 'stg',
+      cat: 'Staging'
     },
     {
-      slug: 'enterprise',
-      cat: 'Enterprise'
+      slug: 'dev1',
+      cat: 'Development - QA1'
     },
     {
-      slug: 'games',
-      cat: 'Games & Entertainment'
+      slug: 'dev2',
+      cat: 'Development - QA2'
     },
     {
-      slug: 'graphics-video-audio',
-      cat: 'Graphics, Video, & Audio'
-    },
-    {
-      slug: 'i18n',
-      cat: 'Internationalization & Localization'
-    },
-    {
-      slug: 'iot',
-      cat: 'Internet of Things'
-    },
-    {
-      slug: 'geo',
-      cat: 'Location & Maps'
-    },
-    {
-      slug: 'machine-learning',
-      cat: 'Machine Learning, Neural Networks, & AI'
-    },
-    // {
-    //   slug: 'messaging',
-    //   cat: 'Messaging & Communications'
-    // },
-    {
-      slug: 'mobile',
-      cat: 'Mobile'
-    },
-    {
-      slug: 'networking',
-      cat: 'Networking'
-    },
-    {
-      slug: 'programming',
-      cat: 'Programming'
-    },
-    {
-      slug: 'samples',
-      cat: 'Samples & Examples'
-    },
-    {
-      slug: 'security',
-      cat: 'Security'
-    },
-    {
-      slug: 'testing',
-      cat: 'Testing'
-    },
-    {
-      slug: 'utilities',
-      cat: 'Utilities'
-    },
-    {
-      slug: 'web',
-      cat: 'Web'
+      slug: 'dev3',
+      cat: 'Development - QA3'
     }
   ];
 }
