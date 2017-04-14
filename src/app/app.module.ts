@@ -26,6 +26,7 @@ import { ProjectsService } from './services/projects.service';
 import { LanguagesService } from './services/languages.service';
 import { DeeplinkService } from './services/deeplink.service';
 import { DropdownService } from './services/dropdown.service';
+import {TruncatePipe} from './services/limitTo.pipe';
 
 const ENVIRONMENT = window['OGC_ENV'] || 'prod';
 const LOCATION_STRATEGY = (ENVIRONMENT === 'dev') ?
@@ -69,7 +70,8 @@ const appRoutes:Routes = [
     LoadMoreComponent,
     LanguageFilterComponent,
     LogoFontComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    TruncatePipe
   ],
   providers: [
     { provide: LocationStrategy, useClass: LOCATION_STRATEGY },

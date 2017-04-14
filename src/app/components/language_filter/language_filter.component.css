@@ -182,6 +182,6 @@
        padding: 0;
      }
       :host .language-menu p {
-       width: 25%;
+       /*width: 25%;*/
      }
    }

@@ -16,7 +16,6 @@ export class ProjectExploreComponent {
   AMBIENCE_RANDOM_ACTION_INTERVAL: number = 3000;
   AMBIENCE_WAIT_AFTER_USER_INPUT: number = 7000;
   LAME_NODE_COUNT: number = 105;
-
   canvas;
   canvas_width: number = this.config_service.MOBILE_WIDTH;
   canvas_height: number = this.config_service.MOBILE_WIDTH;
@@ -25,7 +24,7 @@ export class ProjectExploreComponent {
   timer = window.requestAnimationFrame;
 
   frameCount: number = 0;
-  nodes: Array<any> =[];
+  nodes: Array<any> = [];
   activeNode;
   hoveredNode;
   nextActionTime;
@@ -63,7 +62,7 @@ export class ProjectExploreComponent {
     } else {
       window.addEventListener('resize', () => {
         if (window.innerWidth < this.config_service.MOBILE_WIDTH &&
-            this.router.url.indexOf('explore') > 0) {
+          this.router.url.indexOf('explore') > 0) {
           this.projects_service.requestParams.page_size =
             this.config_service.LIST_PAGE_SIZE;
           this.router.navigate(['/list', 'production']);
@@ -103,18 +102,18 @@ export class ProjectExploreComponent {
   }
 
   private loadProjects = () => {
-    const projects:any = this.projects_service.projects.slice();
-    const lame_node:Object = { lame: true };
+    const projects: any = this.projects_service.projects.slice();
+    const lame_node: Object = { lame: true };
     const _that = this;
     _that.nodes = [];
     let lame_index = 0;
 
-    while(lame_index < this.LAME_NODE_COUNT) {
+    while (lame_index < this.LAME_NODE_COUNT) {
       projects.push(lame_node);
       lame_index++;
     }
 
-    projects.forEach((function(project, index) {
+    projects.forEach((function (project, index) {
       if (index > 15 && !project.lame) {
         project.small = true;
       }
@@ -157,7 +156,7 @@ export class ProjectExploreComponent {
 
   private moveHandler = (evt) => {
     this.hoveredNode = this.mousePos ?
-     this.getNodeUnder(this.mousePos.x, this.mousePos.y) : null;
+      this.getNodeUnder(this.mousePos.x, this.mousePos.y) : null;
 
     const box = this.canvas.getBoundingClientRect();
     this.globalMousePos = {
@@ -165,8 +164,8 @@ export class ProjectExploreComponent {
       y: evt.pageY - box.top - window.pageYOffset
     };
     this.mousePos = new Vector(
-      this.globalMousePos.x - this.canvas_width/2,
-      this.globalMousePos.y - this.canvas_height/2,
+      this.globalMousePos.x - this.canvas_width / 2,
+      this.globalMousePos.y - this.canvas_height / 2,
       0
     );
     evt.preventDefault();
@@ -195,7 +194,7 @@ export class ProjectExploreComponent {
     this.hovered_project = new_hovered_node;
 
     if (new_hovered_node.data.name != this.hoveredNode.data.name
-        && this.hoveredNode.small) {
+      && this.hoveredNode.small) {
       new_hovered_node.data.focus = true;
       new_hovered_node.fadeCount = 0;
       this.hoveredNode.data.focus = false;
@@ -255,7 +254,7 @@ export class ProjectExploreComponent {
   private render = (ctx) => {
     ctx.clearRect(0, 0, this.canvas_width, this.canvas_height);
     ctx.save();
-    ctx.translate(this.canvas_width/2, this.canvas_height/2);
+    ctx.translate(this.canvas_width / 2, this.canvas_height / 2);
 
     // Lines on bottom
     // FF Can't deal with stroked shapes
@@ -282,9 +281,9 @@ export class ProjectExploreComponent {
     // Then large colored project nodes with logo
     this.nodes.forEach((node, index) => {
       if (!node.data.lame &&
-          !node.active &&
-          !node.data.small &&
-          !node.data.focus) {
+        !node.active &&
+        !node.data.small &&
+        !node.data.focus) {
         node.render(ctx);
       }
     });
@@ -332,7 +331,7 @@ export class ProjectExploreComponent {
   }
 
   private getActiveNodes = () => {
-    return this.nodes.filter(function(n) {
+    return this.nodes.filter(function (n) {
       return n.active;
     });
   }
@@ -393,7 +392,7 @@ export class ProjectExploreComponent {
     return (nodes.length && !chosen) ? nodes[0] : chosen;
   }
 
-  private loadProjectDetails = function(evt) {
+  private loadProjectDetails = function (evt) {
     this.projects_service.cachedColor =
       this.selected_project.fallbackColor || this.selected_project.primaryColor;
 
@@ -405,7 +404,7 @@ export class ProjectExploreComponent {
     evt.stopPropogation;
   }
 
-  private clickedArrow = function(direction, $event) {
+  private clickedArrow = function (direction, $event) {
     let currentIndex = 0;
     let newIndex;
     let chosen;

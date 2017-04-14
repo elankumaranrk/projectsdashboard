@@ -38,3 +38,7 @@ testem.log
 #System Files
 .DS_Store
 Thumbs.db
+
+#project data
+/src/app/services/prodb2.json
+
