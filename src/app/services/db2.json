@@ -1,7 +1,7 @@
 {
   "id": "agera",
-  "name": "Agera",
-  "websiteUrl": "https://github.com/google/agera",
+  "name": "QA Print Services",
+  "websiteUrl": "https://id3svcqa2sl/DOLRulesService.wsdl",
   "summary": "Reactive Programming for Android",
   "description": "\u003cp\u003eAgera is a set of classes and interfaces to help write functional, asynchronous, and reactive applications for Android.\u003c/p\u003e\n",
   "repositories": [
