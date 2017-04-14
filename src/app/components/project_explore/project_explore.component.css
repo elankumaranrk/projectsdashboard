@@ -75,7 +75,7 @@
 :host .page {
   -webkit-animation: fade-in 2s ease-in-out 1s forwards;
   animation: fade-in 2s ease-in-out 1s forwards;
-  background: url(\"/assets/images/chevron-dark.svg\") 0 0 no-repeat;
+  background: url("/assets/images/chevron-dark.svg") 0 0 no-repeat;
   cursor: pointer;
   height: 15px;
   left: 10px;

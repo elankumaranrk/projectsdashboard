@@ -6,15 +6,19 @@
         <h5>No results found.</h5>
       </div>
       <div [hidden]="projects_service.APIError">
-        <div class="selected-project" (mouseover)="pauseInteraction = true" (mouseout)="pauseInteraction = false" [ngClass]="{            'active': selected_project_changed          }">
+        <div class="selected-project" (mouseover)="pauseInteraction = true" (mouseout)="pauseInteraction = false" [ngClass]="{'active': selected_project_changed}">
           <div class="project-summary">
-            <logo-font *ngIf="!selected_project.iconUrlSmall" [character]="selected_project.startsWith" [ngStyle]="{                'width': '110px',                'margin': '30px auto 0 auto',                'color': selected_project.fallbackColor              }">
+            <logo-font *ngIf="!selected_project.iconUrlSmall" [character]="selected_project.startsWith" [ngStyle]="{'width': '110px','margin': '30px auto 0 auto',                'color': selected_project.fallbackColor              }">
             </logo-font> <img *ngIf="selected_project.iconUrlSmall" src="{{selected_project.iconUrlSmall}}" alt="{{selected_project.name}} logo"
               (error)="selected_project.iconUrlSmall = null">
             <h5>{{selected_project.name}}</h5>
             <p>{{selected_project.summary}}</p>
-          </div> <span *ngIf="selected_project.name" href="#" (click)="loadProjectDetails($event)" class="text-btn">            View Project          </span>          </div>
-        <canvas (click)="clickHandler($event)" (mousemove)="moveHandler($event)" #canvasEl [ngStyle]="{            'width': canvas_width + 'px',            'height': canvas_height + 'px'          }">
+          </div>
+          <span *ngIf="selected_project.name" href="#" (click)="loadProjectDetails($event)" class="text-btn">
+            View Project
+          </span>
+        </div>
+        <canvas (click)="clickHandler($event)" (mousemove)="moveHandler($event)" #canvasEl [ngStyle]="{'width': canvas_width + 'px','height': canvas_height + 'px'}">
         </canvas>
         <p class="page prev" (click)="clickedArrow(-1, $event)">previous</p>
         <p class="page next" (click)="clickedArrow(+1, $event)">next</p>

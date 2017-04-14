@@ -15,7 +15,7 @@ export class ProjectExploreComponent {
 
   AMBIENCE_RANDOM_ACTION_INTERVAL: number = 3000;
   AMBIENCE_WAIT_AFTER_USER_INPUT: number = 7000;
-  LAME_NODE_COUNT: number = 25;
+  LAME_NODE_COUNT: number = 105;
 
   canvas;
   canvas_width: number = this.config_service.MOBILE_WIDTH;

@@ -107,7 +107,7 @@ export class ProjectNode {
     if (!this.active) {
       this.jitter(0.15);
       this.keepInRing(this.RING_RADIUS, 0.00007);
-      this.rotate(0.002);
+      this.rotate(-0.003);
     } else {
       this.moveToCenter();
     }
