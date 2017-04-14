@@ -12,7 +12,7 @@
             </logo-font> <img *ngIf="selected_project.iconUrlSmall" src="{{selected_project.iconUrlSmall}}" alt="{{selected_project.name}} logo"
               (error)="selected_project.iconUrlSmall = null">
             <h5>{{selected_project.name}}</h5>
-            <p>{{selected_project.summary}}</p>
+            <p>{{selected_project.summary | limitTo:225}}</p>
           </div>
           <span *ngIf="selected_project.name" href="#" (click)="loadProjectDetails($event)" class="text-btn">
             View Project

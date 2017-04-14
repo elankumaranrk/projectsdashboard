@@ -169,7 +169,7 @@ export class ProjectsService {
       URL += '&page_token=' + this.requestParams.page_token;
     }
 
-    return this.http.get('./app/services/db.json')
+    return this.http.get('./app/services/prodb2.json')
       .map((res: Response) => {
         const response = this.processAPIResponse(res);
         this.hasLoaded = true;

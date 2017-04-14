@@ -10,5 +10,5 @@
     </div>
   </div>
   <div class="card-body">
-    <p>{{project.summary}}</p> <a class="text-btn" (click)="loadProjectDetails($event, project)">      View Project    </a>    </div>
+    <p>{{project.summary  | limitTo:150 }}</p> <a class="text-btn" (click)="loadProjectDetails($event, project)">      View Project    </a>    </div>
 </a>
