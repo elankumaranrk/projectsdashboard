@@ -130,3 +130,10 @@
     transform: scale(1);
   }
 }
+
+span img {
+  display: none;
+  margin-top: 3px;
+  position: absolute;
+  opacity: 0.3;
+}

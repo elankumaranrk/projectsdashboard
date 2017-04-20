@@ -10,5 +10,11 @@
     </div>
   </div>
   <div class="card-body">
-    <p>{{project.summary  | limitTo:150 }}</p> <a class="text-btn" (click)="loadProjectDetails($event, project)">      View Project    </a>    </div>
+    <p><span><img src="./assets/images/misc/ic_person_black_24px.svg" alt=""></span>{{project.Manager | limitTo:150 }} <br/>
+      <span><img src="./assets/images/misc/ic_assessment_black_24px.svg" alt=""></span>{{project.Status}} <br/>
+      <span><img src="./assets/images/misc/ic_assessment_black_24px.svg" alt=""></span>{{project.OverAllCompletion}} done!
+      </p>
+    <a class="text-btn" (click)="loadProjectDetails($event, project)">      View Project    </a>
+    <project-status [Schedule]="project.ScheduleRisk" [Cost]="project.CostRisk" [Resource]="project.ResourceRisk" [Scope]="project.ScopeRisk"></project-status>
+  </div>
 </a>

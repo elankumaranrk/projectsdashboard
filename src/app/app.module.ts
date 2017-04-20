@@ -18,6 +18,7 @@ import { LoadMoreComponent } from './components/load_more/load_more.component';
 import { LanguageFilterComponent } from './components/language_filter/language_filter.component';
 import { LogoFontComponent } from './components/logo_font/logo_font.component';
 import { PageNotFoundComponent } from './components/page_not_found/page_not_found.component';
+import {ProjectStatusComponent} from './components/project_status/project_status.component';
 
 import { ConfigService } from './services/config.service';
 import { UtilsService } from './services/utils.service';
@@ -71,7 +72,8 @@ const appRoutes:Routes = [
     LanguageFilterComponent,
     LogoFontComponent,
     PageNotFoundComponent,
-    TruncatePipe
+    TruncatePipe,
+    ProjectStatusComponent
   ],
   providers: [
     { provide: LocationStrategy, useClass: LOCATION_STRATEGY },

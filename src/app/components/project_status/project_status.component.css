@@ -1,0 +1,59 @@
+:host {
+  float: right;
+  opacity: 0.4;
+}
+:host:hover{
+  transform: scale(1);
+}
+div {
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  margin: 2px;
+  display: inline-block;
+  transition: all 0.1s ease-in;
+}
+
+div:hover{
+  transform: scale(1.5);
+}
+div:nth-child(1):hover::before{
+  position: absolute;
+  content: 'Schedule';
+  font-size: 8px;
+  bottom: 5px;
+}
+div:nth-child(2):hover::before{
+  position: absolute;
+  content: 'Cost';
+  font-size: 8px;
+  bottom: 5px;
+}
+div:nth-child(3):hover::before{
+  position: absolute;
+  content: 'Scope';
+  font-size: 8px;
+  bottom: 5px;
+}
+div:nth-child(4):hover::before{
+  position: absolute;
+  content: 'Res';
+  font-size: 8px;
+  bottom: 5px;
+}
+
+.Gray {
+  background-color: gray;
+}
+
+.Red {
+  background-color: red;
+}
+
+.Green {
+  background-color: green;
+}
+
+.Yellow {
+  background-color: yellow;
+}

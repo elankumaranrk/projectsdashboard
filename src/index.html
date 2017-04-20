@@ -1,15 +1,95 @@
 <!doctype html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <title>Open</title>
   <base href="/">
-
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab:300" rel="stylesheet">
 </head>
-<body>
-  <projects-app class="main projects"><div class="loader">Loading</div></projects-app>
+
+<body class="main">
+  <header class="header-main">
+    <h1>
+      <a href="/" data-g-event="Header" data-g-action="Click" data-g-label="Open Source Logo">
+      opensource.google.com
+    </a>
+    </h1>
+    <a id="NavTrigger" href="/#Navigation" data-g-event="Header" data-g-action="Click" data-g-label="Nav Toggle Open">
+      <span>Menu</span>
+    </a>
+    <nav class="main-nav" id="Navigation">
+      <ul>
+        <li class="projects">
+          <a href="/projects/" data-g-event="Header" data-g-action="Click" data-g-label="Projects">
+              Projects
+            </a>
+        </li>
+        <li class="community">
+          <a href="/community/" data-g-event="Header" data-g-action="Click" data-g-label="Community">
+              Applications
+            </a>
+        </li>
+        <li class="docs">
+          <a href="/docs/" data-g-event="Header" data-g-action="Click" data-g-label="Docs">
+              Calendar
+            </a>
+        </li>
+        <li class="blog">
+          <a href="https://opensource.googleblog.com/" target="_self" data-g-event="Header" data-g-action="Click" data-g-label="Blog">
+                About
+            </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <projects-app class="main projects">
+    <div class="loader">Loading</div>
+  </projects-app>
+  <footer id="FooterMain" class="footer-main">
+  <div class="col-wrap">
+    <nav class="footer-nav pull-left">
+      <ul>
+        <li class="google">
+          <a href="http://google.com" data-g-event="Footer" data-g-action="Click" data-g-label="Google Logo">
+            Google
+          </a>
+        </li>
+        <li>
+          <a href="https://www.google.com/policies/privacy/" data-g-event="Footer" data-g-action="Click" data-g-label="Privacy">
+            Privacy
+          </a>
+        </li>
+        <li>
+          <a href="https://www.google.com/policies/terms/" data-g-event="Footer" data-g-action="Click" data-g-label="Terms">
+            Terms
+          </a>
+        </li>
+        <li>
+          <a id="SendFeedback" href="#" data-g-event="Footer" data-g-action="Click" data-g-label="Send Feedback">
+            Send Feedback
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
 </body>
+<script>
+  var BodyEl = document.getElementsByTagName("body")[0];
+  console.log(BodyEl);
+  var toggleNav = function () {
+    var t = BodyEl.className.indexOf("nav-active");
+    t < 0 ? BodyEl.className = BodyEl.className += " nav-active" : BodyEl.className = BodyEl.className
+      .replace(" nav-active", "");
+  }
+  var NavTriggerEl = document.getElementById("NavTrigger");
+  NavTriggerEl.addEventListener("click", function (e) {
+    e.preventDefault(), toggleNav()
+  });
+
+</script>
+
 </html>

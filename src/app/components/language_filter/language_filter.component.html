@@ -1,11 +1,11 @@
-<a [ngClass]="{ active: dropdownActive }" class="trigger" (click)="toggleDropdown($event)">  Filter Languages  <span class="down-dark"></span></a>
+<a [ngClass]="{ active: dropdownActive }" class="trigger" (click)="toggleDropdown($event)">  Filter Applications  <span class="down-dark"></span></a>
 <span
   class="selected-language" *ngFor="let language of languages_service.selectedLanguages" (click)="$event.stopPropagation()">
   <strong>{{language}}</strong> <em class="close" (click)="removeLanguage(language)">x</em></span>
   <form class="language-menu"
     *ngIf="dropdownActive" novalidate [ngClass]="{ active: dropdownActive }" (click)="$event.stopPropagation()">
     <div class="heading">
-      <h4> Filter languages <span class="close" (click)="toggleDropdown($event)">        Close      </span> </h4>
+      <h4> Filter Applications <span class="close" (click)="toggleDropdown($event)">        Close      </span> </h4>
     </div>
     <div class="list">
       <p *ngFor="let language of languages_service.allLanguages"> <input type="checkbox" [checked]="languages_service.selectedLanguages.indexOf(language) >= 0" value="{{language}}"

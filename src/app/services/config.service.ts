@@ -4,10 +4,10 @@ import { Injectable } from '@angular/core';
 export class ConfigService {
 
   public API_BASE_URL: string =
-    'https://dev-opensourceprojects-pa.sandbox.googleapis.com/v1/projects/';
+  'https://dev-opensourceprojects-pa.sandbox.googleapis.com/v1/projects/';
   public API_KEY: string = 'AIzaSyDdSrWzwIWQnBTFUuqMfT16xc6-QOkPucY';
   public API_BASE_URL_PROD: string =
-    'https://opensourceprojects-pa.googleapis.com/v1/projects/';
+  'https://opensourceprojects-pa.googleapis.com/v1/projects/';
   public API_KEY_PROD: string = 'AIzaSyC-j2zg47MN_K041U-KQwiQIIdPUZtvIkg';
 
   public LIST_PAGE_SIZE: number = 12;
@@ -15,7 +15,7 @@ export class ConfigService {
 
   public MOBILE_WIDTH: number = 720;
 
-  public COLORS:Object = {
+  public COLORS: Object = {
     GREEN: '#34A853',
     RED: '#EA4335',
     BLUE: '#4285F4',
@@ -23,15 +23,15 @@ export class ConfigService {
   };
 
   public ENVIRONMENT: string = window['OGC_ENV'] ||
-    document.body.getAttribute('data-env');
+  document.body.getAttribute('data-env');
 
   public TRACK_EVENT = (category: string, action: string, label: string) => {
     try {
       window['GA_TRACKER'].trackEvent(category, action, label);
-    } catch(err) {}
+    } catch (err) { }
   };
 
-  public LANGUAGES: Array<string> = [
+  public TEAMSLANGUAGES: Array<string> = [
     'c',
     'c#',
     'c++',
@@ -48,6 +48,24 @@ export class ConfigService {
     'rust',
     'shell',
     'typescript'
+  ];
+  public LANGUAGES: Array<string> = [
+    'ID3',
+    'ALIP',
+    'VS10',
+    'FrontOffice',
+    'LegacyWorkflow',
+    'BPM',
+    'DataServices',
+    'OnBase',
+    'TrueProducer',
+    'TrueComp',
+    'Web',
+    'LegacyPrint',
+    'SIG',
+    'Documaker',
+    'BASS',
+    'AZTEK'
   ];
 
   public CATEGORIES: Array<Object> = [
